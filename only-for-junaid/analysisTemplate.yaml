@@ -12,25 +12,20 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          profile: opsmx-profile-v3
-          gateUrl: https://isd-dev.argo-dev.opsmx.net/
+          profile: opsmx-profile
+          gateUrl: https://argoqa-helm.isd-dev.opsmx.net/ 
           application: final-tests
           user: admin
+          intervalTime: 3
+          lookBackType: "growing"
           lifetimeMinutes: 6
           threshold:
             pass: 80
             marginal: 60
           globalMetricTemplate: prometheusverification
-          globalLogTemplate: logtemp
+          globalLogTemplate: testLogTemplateName65998
           services:
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate"
-            logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.baseline-hash}}.*"
-            logTemplateName: "stackdriver-validator"
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.baseline-hash}}.*"
+            logTemplateVersion: "v5.0"
