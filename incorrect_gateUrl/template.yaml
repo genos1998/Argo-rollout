@@ -17,8 +17,8 @@ spec:
           application: negative-tests
           user: admin
           lifetimeMinutes: 3
-          baselineStartTime: "2022-10-04T10:13:09.0000Z"
-          canaryStartTime: "2022-10-04T10:10:09.0000Z"
+          baselineStartTime: "2022-10-04T10:10:09.0000Z"
+          canaryStartTime: "2022-10-04T10:13:09.0000Z"
           threshold:
             pass: 80
             marginal: 60
