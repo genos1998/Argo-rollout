@@ -17,17 +17,22 @@ spec:
           application: negative-tests
           user: admin
           lifetimeMinutes: 3
-          baselineStartTime: "2022-10-04T10:10:09.0000Z"
-          canaryStartTime: "2022-10-04T10:10:09.0000Z"
           threshold:
             pass: 80
             marginal: 60
+          globalMetricTemplate: prometheustemplate
+          globalLogTemplate: elastictemplate
           services:
-          - logTemplateName: stacktemplatenoregex
-            logScopeVariables: "resource.labels.container_name"
-            baselineLogScope: "sd-ss1-canary-67d9ddfb45-d7c92"
-            canaryLogScope: "sd-ss1-canary-67d9ddfb45-d7c92"
-          - logTemplateName: stacktemplateregex
-            logScopeVariables: "resource.labels.pod_name"
-            baselineLogScope: "sd-ss1-canary-*-d7c92"
-            canaryLogScope: "sd-ss1-canary-*-d7c92"
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+            baselineMetricScope: "argocd,{{args.baseline-hash}},final-tests"
+            canaryMetricScope: "argocd,{{args.canary-hash}},final-tests"
+            metricTemplateName: "PrometheusLocalTemplate"
+          - metricScopeVariables: "${namespace_key},${pod_key}"
+            baselineMetricScope: "argocd,{{args.baseline-hash}}"
+            canaryMetricScope: "argocd,{{args.canary-hash}}"
+            logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
