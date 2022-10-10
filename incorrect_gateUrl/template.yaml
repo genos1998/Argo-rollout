@@ -25,9 +25,5 @@ spec:
           services:
           - logTemplateName: stacktemplate
             logScopeVariables: "resource.labels.container_name"
-            baselineLogScope: "issuegen-prod"
-            canaryLogScope: "issuegen-prod"
-          - logTemplateName: stacktemplate
-            logScopeVariables: "resource.labels.container_name"
             baselineLogScope: "issuegen*"
             canaryLogScope: "issuegen*"
