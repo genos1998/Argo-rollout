@@ -27,7 +27,10 @@ spec:
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             metricTemplateName: "PrometheusMetricTemplate"
+            logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.baseline-hash}}.*"
+            logTemplateName: "stackdriver-validator"
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.baseline-hash}}.*"
-
