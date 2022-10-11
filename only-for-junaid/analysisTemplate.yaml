@@ -17,6 +17,8 @@ spec:
           application: final-tests
           user: admin
           lifetimeMinutes: 9
+          intervalTime: 3
+          lookBackType: growing
           threshold:
             pass: 80
             marginal: 60
