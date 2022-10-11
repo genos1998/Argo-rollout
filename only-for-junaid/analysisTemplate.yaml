@@ -32,8 +32,3 @@ spec:
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             metricTemplateName: "PrometheusMetricTemplate"
-          - logTemplateName: "stacktemplatemd"
-            logTemplateVersion: "v2.0"
-            logScopeVariables: "resource.labels.pod_name"
-            baselineLogScope: "sd-ss1-canary-.*{{args.baseline-hash}}.*"
-            canaryLogScope: "sd-ss1-canary-.*{{args.canary-hash}}.*"
