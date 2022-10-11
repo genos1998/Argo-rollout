@@ -17,14 +17,13 @@ spec:
           application: negative-tests
           user: admin
           lifetimeMinutes: 3
-          baselineStartTime: "2021-11-03T11:29:46.915Z"
-          canaryStartTime: "2021-11-03T11:29:46.915Z" 
+          baselineStartTime: "2022-09-16T06:10:00Z"
+          canaryStartTime: "2022-09-19T08:06:00Z"
           threshold:
             pass: 80
             marginal: 60
           services:
-          - serviceName: elksvc1
-            logTemplateName: oct6logtemp
-            logScopeVariables: "kubernetes.container_name"
-            baselineLogScope: "baseapp-rest-1"
-            canaryLogScope: "canaryapp-rest-1"
+          - logTemplateName: stacktemplate
+            logScopeVariables: "resource.labels.container_name"
+            baselineLogScope: "issuegen-prod"
+            canaryLogScope: "issuegen-prod"
