@@ -30,3 +30,6 @@ spec:
             canaryMetricScope: "argocd,{{args.canary-hash}}"
             metricTemplateName: "missionfailmetric"
             metricTemplateVersion: "v8.0"
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.baseline-hash}}.*"
