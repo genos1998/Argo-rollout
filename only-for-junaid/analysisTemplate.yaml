@@ -18,10 +18,10 @@ spec:
           user: admin
           lifetimeMinutes: 9
           intervalTime: 3
-          lookBackType: sliding
+          lookBackType: growing
           threshold:
             pass: 80
-            marginal: 10
+            marginal: 60
           globalMetricTemplate: prometheusverification
           globalLogTemplate: logtemp
           services:
@@ -29,3 +29,6 @@ spec:
             baselineMetricScope: "argocd,{{args.baseline-hash}}"
             canaryMetricScope: "argocd,{{args.canary-hash}}"
             metricTemplateName: "missionfailmetric"
+            logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
