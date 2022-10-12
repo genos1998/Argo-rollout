@@ -21,10 +21,11 @@ spec:
           lookBackType: sliding
           threshold:
             pass: 80
-            marginal: 60
+            marginal: 10
           globalMetricTemplate: prometheusverification
           globalLogTemplate: logtemp
           services:
-          - logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.baseline-hash}}.*"
+          - metricScopeVariables: "${namespace_key},${pod_key}"
+            baselineMetricScope: "argocd,{{args.baseline-hash}}"
+            canaryMetricScope: "argocd,{{args.canary-hash}}"
+            metricTemplateName: "missionfailmetric"
