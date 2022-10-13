@@ -16,7 +16,7 @@ spec:
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
           application: final-tests
           user: admin
-          intervalTime: 3
+          intervalTime: 5
           lookBackType: growing
           lifetimeMinutes: 7
           threshold:
