@@ -25,7 +25,8 @@ spec:
           globalMetricTemplate: prometheusverification
           globalLogTemplate: logtemp
           services:
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "metricMissionFailMid"          
+          - metricScopeVariables: "${namespace_key},${pod_key}"
+            baselineMetricScope: "abca,{{args.baseline-hash}}"
+            canaryMetricScope: "abca,{{args.canary-hash}}"
+            metricTemplateName: "metricMissionFailMid"
+            metricTemplateVersion: "v3.0"
