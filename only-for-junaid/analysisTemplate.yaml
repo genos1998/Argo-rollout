@@ -18,16 +18,13 @@ spec:
           user: admin
           intervalTime: 3
           lookBackType: sliding
-          lifetimeMinutes: 13
+          lifetimeMinutes: 6
           threshold:
             pass: 80
             marginal: 65
           globalMetricTemplate: prometheusverification
           globalLogTemplate: logtemp
           services:
-          - logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: "base"
-            canaryLogScope: "can"
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
