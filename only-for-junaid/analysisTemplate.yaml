@@ -16,7 +16,6 @@ spec:
           gateUrl: https://argoqa-helm.isd-dev.opsmx.net/
           application: final-tests
           user: admin
-          lookBackType: growing
           lifetimeMinutes: 3
           threshold:
             pass: 80
