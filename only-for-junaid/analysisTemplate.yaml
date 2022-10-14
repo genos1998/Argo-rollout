@@ -17,8 +17,8 @@ spec:
           application: final-tests
           user: admin
           intervalTime: 3
-          lookBackType: growing
-          lifetimeMinutes: 10
+          lookBackType: sliding
+          lifetimeMinutes: 7
           threshold:
             pass: 90
             marginal: 65
@@ -28,14 +28,3 @@ spec:
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate"
-          - logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: "base"
-            canaryLogScope: "can"
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate"
