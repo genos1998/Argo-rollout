@@ -9,7 +9,6 @@ spec:
   metrics:
     - name: sj-analysis
       count: 1
-      initialDelay: 10s
       provider:
         opsmx:
           profile: rollout-prof-saas
