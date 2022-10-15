@@ -1,0 +1,41 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: sdnr-isd-analysis-ss1-canary
+spec:
+  args:
+    - name: canary-hash
+    - name: baseline-hash
+  metrics:
+    - name: sdnr-isd-analysis-ss1-canary-score
+      count: 1
+      initialDelay: 10s
+      provider:
+        opsmx:
+          application: sdnr-isd-analysis-testapp
+          profile: opsmx-rollout-profile
+          lifetimeMinutes: 6
+          threshold:
+            pass: 80
+            marginal: 60
+          services:
+          - logTemplateName: "stackdriver-validator"
+            logTemplateVersion: "v1.0"
+            logScopeVariables: "resource.labels.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+            metricTemplateName: "newrelic-validator"
+            metricTemplateVersion: "v1.0"
+            metricScopeVariables: "${app_key},${host_key}"
+            baselineMetricScope: "issuegen-ss1-sd-nr,.*{{args.baseline-hash}}.*"
+            canaryMetricScope: "issuegen-ss1-sd-nr,.*{{args.canary-hash}}.*"
+          - logTemplateName: "stackdriver-validator"
+            logTemplateVersion: "v1.0"
+            logScopeVariables: "resource.labels.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+          - metricTemplateName: "newrelic-validator"
+            metricTemplateVersion: "v1.0"
+            metricScopeVariables: "${app_key},${host_key}"
+            baselineMetricScope: "issuegen-ss1-sd-nr,.*{{args.baseline-hash}}.*"
+            canaryMetricScope: "issuegen-ss1-sd-nr,.*{{args.canary-hash}}.*"
