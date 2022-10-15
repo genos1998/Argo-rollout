@@ -9,11 +9,12 @@ spec:
   metrics:
     - name: sj-analysis
       count: 1
+      initialDelay: 10s
       provider:
         opsmx:
           profile: rollout-prof-saas
           gateUrl: https://isdrollout.argo-dev.opsmx.net
-          application: final-tests
+          application: final-testss
           user: admin
           intervalTime: 3
           lookBackType: sliding
@@ -22,21 +23,15 @@ spec:
             pass: 90
             marginal: 65
           globalMetricTemplate: prometheusverification
-          globalLogTemplate: stackdriver-validator
+          globalLogTemplate: logtemp
           services:
-          - logTemplateName: "stackdriver-validator"
-            logScopeVariables: "resource.labels.pod_name"
+          - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-            metricTemplateName: "newrelic-validator"
-            metricScopeVariables: "${app_key},${host_key}"
-            baselineMetricScope: "issuegen-ss1-sd-nr,.*{{args.baseline-hash}}.*"
-            canaryMetricScope: "issuegen-ss1-sd-nr,.*{{args.canary-hash}}.*"
-          - logTemplateName: "stackdriver-validator"
-            logScopeVariables: "resource.labels.pod_name"
-            baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.canary-hash}}.*"
-          - metricTemplateName: "newrelic-validator"
-            metricScopeVariables: "${app_key},${host_key}"
-            baselineMetricScope: "issuegen-ss1-sd-nr,.*{{args.baseline-hash}}.*"
-            canaryMetricScope: "issuegen-ss1-sd-nr,.*{{args.canary-hash}}.*"
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: "abc"
+            canaryLogScope: "def"
+          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+            baselineMetricScope: "argocds,a,demoappy-issuegen"
+            canaryMetricScope: "argocds,b,demoappy-issuegen"
+            metricTemplateName: "PrometheusMetricTemplate"  
