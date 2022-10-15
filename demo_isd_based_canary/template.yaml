@@ -13,7 +13,7 @@ spec:
       provider:
         opsmx:
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: uniqueapp
+          application: uniqueapps
           profile: opsmx-profile-v3
           user: admin
           lifetimeMinutes: 3
