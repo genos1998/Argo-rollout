@@ -32,6 +32,6 @@ spec:
             baselineLogScope: "abc"
             canaryLogScope: "def"
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
+            baselineMetricScope: "argocds,a,demoappy-issuegen"
+            canaryMetricScope: "argocds,b,demoappy-issuegen"
             metricTemplateName: "PrometheusMetricTemplate"  
