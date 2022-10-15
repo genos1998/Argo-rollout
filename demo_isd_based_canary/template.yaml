@@ -14,9 +14,9 @@ spec:
         opsmx:
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
           application: uniqueapp
-          profile: opsmx-profile-v2
+          profile: opsmx-profile-v3
           user: admin
-          lifetimeMinutes: "3"
+          lifetimeMinutes: 3
           threshold:
             pass: 80
             marginal: 60
