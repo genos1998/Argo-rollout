@@ -23,7 +23,7 @@ spec:
             pass: 90
             marginal: 65
           globalMetricTemplate: prometheusverification
-          globalLogTemplate: logtemp
+          globalLogTemplate: stackdriver-validator
           services:
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
@@ -34,4 +34,4 @@ spec:
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocds,a,demoappy-issuegen"
             canaryMetricScope: "argocds,b,demoappy-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate"  
+            metricTemplateName: "newrelic-validator"  
