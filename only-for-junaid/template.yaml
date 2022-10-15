@@ -12,8 +12,8 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          application: sdnr-isd-analysis-testapp
-          profile: opsmx-rollout-profile
+          application: sdnrj-isd-analysis-testapp
+          profile: rollout-prof-saas
           lifetimeMinutes: 6
           threshold:
             pass: 80
