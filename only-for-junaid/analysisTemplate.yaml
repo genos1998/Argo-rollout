@@ -12,9 +12,9 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          profile: rollout-prof-saas
+          profile: opsmx-profile-v3
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: final-testss
+          application: final-tests
           user: admin
           intervalTime: 3
           lookBackType: sliding
