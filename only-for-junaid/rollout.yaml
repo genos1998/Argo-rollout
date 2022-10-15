@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: sdnr-ss1-canary
+  name: sdnrj-ss1-canary
 spec:
   replicas: 4
   revisionHistoryLimit: 2
