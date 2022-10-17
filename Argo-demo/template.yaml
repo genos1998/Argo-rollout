@@ -14,29 +14,29 @@ spec:
         opsmx:
           application: argo-demo
           profile: rollout-prof-saas
-          gateUrl: https://isdrollout.argo-dev.opsmx.net
+          gateUrl: https://isd-dev.argo-dev.opsmx.net/
           user: admin
           lifetimeMinutes: 6
           threshold:
             pass: 80
             marginal: 60
           services:
-          - logTemplateName: "stackdriver-validator"
+          - logTemplateName: "stackdriver-validator-template"
             logTemplateVersion: "v1.0"
             logScopeVariables: "resource.labels.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-            metricTemplateName: "newrelic-validator"
+            metricTemplateName: "newrelic-validator-template"
             metricTemplateVersion: "v1.0"
             metricScopeVariables: "${app_key},${host_key}"
             baselineMetricScope: "issuegen-ss1-sd-nr-argocd,.*{{args.baseline-hash}}.*"
             canaryMetricScope: "issuegen-ss1-sd-nr-argocd,.*{{args.canary-hash}}.*"
-          - logTemplateName: "stackdriver-validator"
+          - logTemplateName: "stackdriver-validator-template"
             logTemplateVersion: "v1.0"
             logScopeVariables: "resource.labels.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-          - metricTemplateName: "newrelic-validator"
+          - metricTemplateName: "newrelic-validator-template"
             metricTemplateVersion: "v1.0"
             metricScopeVariables: "${app_key},${host_key}"
             baselineMetricScope: "issuegen-ss1-sd-nr-argocd,.*{{args.baseline-hash}}.*"
