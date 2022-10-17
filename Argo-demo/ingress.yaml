@@ -8,13 +8,13 @@ metadata:
     ingress.kubernetes.io/app-root: /
 spec:
   rules:
-  - host: issuegen-sdnr.app-canaries.opsmx.net
+  - host: issuegen-sdnr.app-canary.opsmx.net
     http:
       paths:
       - path: /
         pathType: ImplementationSpecific
         backend:
           service:
-            name: sdnr-ss1-app-argocd-svc
+            name: sdnr-ss1-app-svc
             port:
               number: 80
