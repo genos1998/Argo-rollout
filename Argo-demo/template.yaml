@@ -1,0 +1,37 @@
+kind: AnalysisTemplate
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  name: sj-analysis
+spec:
+  args:
+    - name: canary-hash
+    - name: baseline-hash
+  metrics:
+    - name: sj-analysis
+      count: 1
+      initialDelay: 10s
+      provider:
+        opsmx:
+          profile: opsmx-profile-v3
+          gateUrl: https://isd-dev.argo-dev.opsmx.net/
+          application: final-tests
+          user: admin
+          intervalTime: 3
+          lookBackType: sliding
+          lifetimeMinutes: 7
+          threshold:
+            pass: 90
+            marginal: 65
+          globalMetricTemplate: prometheusverification
+          globalLogTemplate: logtemp
+          services:
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: "abc"
+            canaryLogScope: "def"
+          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+            baselineMetricScope: "argocds,a,demoappy-issuegen"
+            canaryMetricScope: "argocds,b,demoappy-issuegen"
+            metricTemplateName: "PrometheusMetricTemplate"  
