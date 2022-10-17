@@ -12,8 +12,9 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          profile: opsmx-profile-v3
+          profile: rollout-prof-saas
           application: final-tests
+          gateUrl: https://isdrollout.argo-dev.opsmx.net/
           user: admin
           intervalTime: 3
           lookBackType: growing
