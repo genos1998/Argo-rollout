@@ -14,7 +14,8 @@ spec:
         opsmx:
           application: argo-demo
           profile: opsmx-cd-profile
-          gateUrl: https://isd-dev.argo-dev.opsmx.net/
+          gateUrl: https://isdrollout.argo-dev.opsmx.net
+          user: admin
           lifetimeMinutes: 6
           threshold:
             pass: 80
