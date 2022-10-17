@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: sdnr-ss1-app-argocd-svc
+  name: sdnr-ss1-app-svc-argocd
 spec:
   selector:
-    app: sdnr-ss1-app
+    app: sdnr-ss1-app-argocd
   ports:
   - protocol: TCP
     port: 80
