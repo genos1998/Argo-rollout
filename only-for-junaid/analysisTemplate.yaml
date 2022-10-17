@@ -17,7 +17,7 @@ spec:
           application: argocd-demo
           user: admin
           intervalTime: 3
-          lookBackType: sliding
+          lookBackType: growing
           lifetimeMinutes: 7
           threshold:
             pass: 90
