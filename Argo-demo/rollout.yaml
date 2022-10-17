@@ -1,13 +1,12 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: sdnr-ss1-canary
-spec:
+  name: sdnr-ss1-canary-argocd
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: sdnr-ss1-app
+      app: sdnr-ss1-app-argocd
   template:
     metadata:
       annotations:
@@ -15,7 +14,7 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: sdnr-ss1-app
+        app: sdnr-ss1-app-argocd
     spec:
       containers:
         - name: sdnr-ss1-app-v1
@@ -27,7 +26,7 @@ spec:
             - name: NEWRELIC_LICENSE
               value: 68b87ee3618f714a039cead822d6d250b54dNRAL
             - name: SERVICE_NAME
-              value: issuegen-ss1-sd-nr
+              value: issuegen-ss1-sd-nr-argocd
   strategy:
     canary:
       steps:
@@ -35,7 +34,7 @@ spec:
         - pause: { duration: 60s }
         - analysis:
             templates:
-              - templateName: sdnr-isd-analysis-ss1-canary
+              - templateName: sdnr-isd-analysis-ss1-canary-argocd
             args:
               - name: canary-hash
                 valueFrom:
@@ -47,7 +46,7 @@ spec:
         - pause: { duration: 60s }
         - analysis:
             templates:
-              - templateName: sdnr-isd-analysis-ss1-canary
+              - templateName: sdnr-isd-analysis-ss1-canary-argocd
             args:
               - name: canary-hash
                 valueFrom:
