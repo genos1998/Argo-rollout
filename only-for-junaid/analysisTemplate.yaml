@@ -14,7 +14,7 @@ spec:
         opsmx:
           profile: opsmx-profile-v3
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: final-tests
+          application: argocd-demo
           user: admin
           intervalTime: 3
           lookBackType: sliding
