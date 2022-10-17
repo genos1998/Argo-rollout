@@ -14,7 +14,7 @@ spec:
         opsmx:
           profile: opsmx-profile-v3
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
-          application: negative-tests
+          application: newnew
           user: admin
           lifetimeMinutes: 3
           baselineStartTime: "2022-09-16T06:10:00Z"
