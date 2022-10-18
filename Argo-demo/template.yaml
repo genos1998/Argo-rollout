@@ -12,7 +12,7 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          application: argo-demoss
+          application: argos-demos
           profile: opsmx-cd-profile
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
           user: admin
