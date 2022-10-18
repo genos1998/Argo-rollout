@@ -12,7 +12,7 @@ spec:
       initialDelay: 10s
       provider:
         opsmx:
-          application: argosy-demos
+          application: argosysy-demos
           profile: rollout-prof-saas
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
           user: admin
