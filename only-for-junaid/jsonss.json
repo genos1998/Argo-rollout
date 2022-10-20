@@ -1,0 +1,48 @@
+{
+    "application": "canary-rollout-app",
+    "sourceName": "argocd",
+    "sourceType": "argocd",
+    "canaryConfig": {
+        "lifetimeMinutes": "3",        
+        "canaryHealthCheckHandler": {
+            "minimumCanaryResultScore": "65"
+        },
+        "canarySuccessCriteria": {
+            "canaryResultScore": "80"
+        }
+    },
+    "canaryDeployments": [
+        {
+            "canaryStartTimeMs": "1665765123041",
+            "baselineStartTimeMs": "1665765123041",
+            "canary": {
+                "log": {
+                    "service1": {
+                        "kubernetes.pod_name": ".*866d9449df.*",
+                        "serviceGate": "gate1",
+                        "template": "elasticsearch-log-validator"
+                    },
+                    "service2": {
+                        "kubernetes.pod_name": "can",
+                        "serviceGate": "gate2",
+                        "template": "elasticsearch-log-validator"
+                    }
+                }
+            },
+            "baseline": {
+                "log": {
+                    "service1": {
+                        "kubernetes.pod_name": ".*67d4b9888d.*",
+                        "serviceGate": "gate1",
+                        "template": "elasticsearch-log-validator"
+                    },
+                    "service2": {
+                        "kubernetes.pod_name": "base",
+                        "serviceGate": "gate2",
+                        "template": "elasticsearch-log-validator"
+                    }
+                }
+            }
+        }
+    ]
+}
