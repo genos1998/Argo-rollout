@@ -18,7 +18,7 @@ spec:
           user: admin
           intervalTime: 3
           lookBackType: growing
-          lifetimeMinutes: 3
+          lifetimeMinutes: 180
           threshold:
             pass: 90
             marginal: 65
@@ -39,10 +39,6 @@ spec:
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-          - metricScopeVariables: "${namespace_key},${pod_key}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}}"
-            canaryMetricScope: "argocd,{{args.canary-hash}}"
-            metricTemplateName: "missionfailmetric"
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
@@ -54,7 +50,3 @@ spec:
             logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: "base"
             canaryLogScope: "can"
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate" 
