@@ -18,12 +18,12 @@ spec:
           user: admin
           intervalTime: 3
           lookBackType: growing
-          lifetimeMinutes: 180
+          lifetimeMinutes: 3
           threshold:
             pass: 90
             marginal: 65
           globalMetricTemplate: prometheusverification
-          globalLogTemplate: logtemp
+          globalLogTemplate: testUI
           services:
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
