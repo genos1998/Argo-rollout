@@ -23,6 +23,7 @@ spec:
           threshold:
             pass: 90
             marginal: 65
+          globalMetricTemplate: metrixtemplatetestingv1
           services:
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
