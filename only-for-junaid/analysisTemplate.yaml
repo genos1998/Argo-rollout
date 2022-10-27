@@ -31,4 +31,4 @@ spec:
             metricTemplateName: "metrixtemplatetestingv121" 
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
