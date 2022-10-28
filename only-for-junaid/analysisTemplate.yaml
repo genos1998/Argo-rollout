@@ -23,7 +23,7 @@ spec:
           threshold:
             pass: 90
             marginal: 65
-          globalLogTemplate: logtemp
+          globalLogTemplate: logtemplatetestingv121
           services:
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
