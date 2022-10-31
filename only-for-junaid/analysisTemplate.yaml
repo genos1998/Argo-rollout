@@ -25,14 +25,6 @@ spec:
             marginal: 65
           globalLogTemplate: logtemp
           services:
-          - logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.canary-hash}}.*"
-            logTemplateName: "logtemplatetestingv101"
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "metrixtemplatetestingv101" 
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
