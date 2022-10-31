@@ -19,19 +19,21 @@ spec:
           intervalTime: 3
           lookBackType: growing
           lifetimeMinutes: 3
-          gitops: false
+          gitops: true
           threshold:
             pass: 90
             marginal: 65
           globalLogTemplate: logtemp
           services:
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+            logTemplateName: "logtemplatetestingv101"
+            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "metricy"
-            metricTemplateVersion: "v3.0"
+            metricTemplateName: "metrixtemplatetestingv101" 
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
             metricTemplateName: "metricy" 
-            metricTemplateVersion: "v2.0"
