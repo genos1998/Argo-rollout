@@ -15,6 +15,6 @@ spec:
         pathType: ImplementationSpecific
         backend:
           service:
-            name: sdnr-ss1-app-svc
+            name: long-run-app-svc
             port:
               number: 80
