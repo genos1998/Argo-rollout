@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: metrixtempvxx100001
+  name: validjson
 data: 
  Template: ISDTemplate
  TemplateType: Metric
@@ -31,7 +31,7 @@ data:
       }
     ]
   },
-  "templateName": "metrixtempvxx100001",
+  "templateName": "validjson",
   "isEdit": false,
   "advancedProvider": "PROMETHEUS",
   "versionNo": "v1.0"
