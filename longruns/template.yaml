@@ -19,7 +19,7 @@ spec:
           intervalTime: 15
           lookBackType: growing
           lifetimeMinutes: 180
-          gitops: true
+          gitops: false
           threshold:
             pass: 90
             marginal: 65
