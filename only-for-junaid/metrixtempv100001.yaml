@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: metrixtempv100001
+  name: metrixtempvX100001
 data: 
  Template: ISDTemplate
  TemplateType: Metric
@@ -25,13 +25,12 @@ data:
             "criticality": "Normal",
             "customThresholdLower": 40,
             "watchlist": false
-          }
         ],
         "group": "Memory Usage By Pod Name"
       }
     ]
   },
-  "templateName": "metrixtempv100001",
+  "templateName": "metrixtempvX100001",
   "isEdit": true,
   "advancedProvider": "PROMETHEUS",
   "versionNo": ""
