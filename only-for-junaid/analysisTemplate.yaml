@@ -19,12 +19,12 @@ spec:
           intervalTime: 3
           lookBackType: growing
           lifetimeMinutes: 3
-          gitops: true
+          #gitops: true
           threshold:
             pass: 90
             marginal: 65
-          services: 
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "metrixtempvxx100001" 
+          services:
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+            logTemplateName: "testingUI"
