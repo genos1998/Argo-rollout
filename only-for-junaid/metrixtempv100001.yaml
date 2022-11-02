@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: metrixtempv101
+  name: metrixtempv100001
 data: 
  Template: ISDTemplate
  TemplateType: Metric
