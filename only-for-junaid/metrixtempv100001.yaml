@@ -30,7 +30,7 @@ data:
       }
     ]
   },
-  "templateName": "metrixtempv11",
+  "templateName": "metrixtempv100001",
   "isEdit": true,
   "advancedProvider": "PROMETHEUS",
   "versionNo": ""
