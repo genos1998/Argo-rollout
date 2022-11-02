@@ -14,7 +14,6 @@ data:
       "groups": [
        {
         "metrics": [
-          {
             "metricType": "ADVANCED",
             "metricWeight": 1,
             "nanStrategy": "Remove",
@@ -35,3 +34,4 @@ data:
   "isEdit": true,
   "advancedProvider": "PROMETHEUS",
   "versionNo": ""
+}
