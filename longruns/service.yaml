@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: long-run-app-svc
+spec:
+  selector:
+    app: long-run-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8088
