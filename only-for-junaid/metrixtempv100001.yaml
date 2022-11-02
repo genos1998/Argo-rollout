@@ -5,3 +5,33 @@ metadata:
 data: 
  Template: ISDTemplate
  TemplateType: Metric
+  {
+   "filterKey": "${namespace_key},${pod_key},${app_name}",
+   "data": {
+     "percent_diff_threshold": "hard",
+      "isNormalize": false,
+      "groups": [
+       {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "isd312-saas-prom",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": 40,
+            "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})",
+            "criticality": "Normal",
+            "customThresholdLower": 40,
+            "watchlist": false
+          }
+        ],
+        "group": "Memory Usage By Pod Name"
+      }
+    ]
+  },
+  "templateName": "metrixtempv11",
+  "isEdit": true,
+  "advancedProvider": "PROMETHEUS",
+  "versionNo": ""
+  }
