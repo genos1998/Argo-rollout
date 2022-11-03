@@ -16,9 +16,9 @@ spec:
           application: final-tests
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
           user: admin
-          intervalTime: 15
+          intervalTime: 3
           lookBackType: growing
-          lifetimeMinutes: 180
+          lifetimeMinutes: 3
           gitops: true
           threshold:
             pass: 90
@@ -28,14 +28,3 @@ spec:
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
             logTemplateName: "testingUI"
-          - logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.canary-hash}}.*"
-            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate"
-          - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
-            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "PrometheusMetricTemplate"
