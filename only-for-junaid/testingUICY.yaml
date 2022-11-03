@@ -7,7 +7,7 @@ data:
  TemplateType: LOG
  Json: |
    {
-    "templateName": "testingUICY",
+    "templateName": "testingUICXY",
     "monitoringProvider": "ELASTICSEARCH",
     "scoringAlgorithm": "Canary",
     "accountName": "logEalastic1",
