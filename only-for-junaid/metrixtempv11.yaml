@@ -32,5 +32,5 @@ data:
     ]
   },
   "templateName": "metrixy",
-  "advancedProvider": "PROMETHEUS",
+  "advancedProvider": "PROMETHEUS"
   }
