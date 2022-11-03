@@ -9,7 +9,6 @@ data:
    {
     "templateName": "testingUICXY",
     "monitoringProvider": "ELASTICSEARCH",
-    "scoringAlgorithm": "Canary",
     "accountName": "logEalastic1",
     "index": "kubernetes*",
     "filterKey": "kubernetes.pod_name",
