@@ -27,4 +27,4 @@ spec:
           - logScopeVariables: "kubernetes.pod_name"
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
-            logTemplateName: "testingUI"
+            logTemplateName: "testingUIS"
