@@ -31,8 +31,7 @@ data:
       }
     ]
   },
-  "templateName": "metrixtempv11",
   "isEdit": true,
   "advancedProvider": "PROMETHEUS",
   "versionNo": ""
-  
+  }
