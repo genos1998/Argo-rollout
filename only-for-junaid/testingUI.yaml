@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: logtempv11
+  name: testingUI
 data: 
  Template: ISDTemplate
  TemplateType: LOG
  Json: |
    {
-    "templateName": "logtempv11",
+    "templateName": "testingUI",
     "monitoringProvider": "ELASTICSEARCH",
     "scoringAlgorithm": "Canary",
     "accountName": "logEalastic1",
