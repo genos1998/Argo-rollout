@@ -12,10 +12,6 @@ data:
     "scoringAlgorithm": "Canary",
     "accountName": "logEalastic1",
     "index": "kubernetes*",
-    "namespace": null,
-    "regExFilter": false,
-    "regExResponseKey": "",
-    "regularExpression": "",
     "filterKey": "kubernetes.pod_name",
     "autoBaseline": false,
     "sensitivity": "high",
@@ -144,20 +140,9 @@ data:
     }
     ],
     "responseKeywords": "log",
-    "logGroupName": "",
-    "logStreamName": "",
-    "region": "",
     "verificationType": "VERIFICATION",
-    "testCaseKey": "",
-    "testSuiteKey": "",
     "infoScoring": false,
     "contextualCluster": false,
     "contextualWindowSize": 25,
-    "tagEnabled": false,
-    "streamId": "",
-    "timestampKey": "",
-    "applicationId": 0,
-    "applicationName": "",
-    "emailId": "",
-    "versionNo": "v1.0"
+    "tagEnabled": false
     }
