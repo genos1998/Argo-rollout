@@ -28,8 +28,3 @@ spec:
             baselineLogScope: ".*{{args.baseline-hash}}.*"
             canaryLogScope: ".*{{args.canary-hash}}.*"
             logTemplateName: "testingUI"
-          - logScopeVariables: "kubernetes.pod_name"
-            baselineLogScope: ".*{{args.baseline-hash}}.*"
-            canaryLogScope: ".*{{args.canary-hash}}.*"
-            logTemplateName: "testingUI"
-            logTemplateVersion: "v3.0"
