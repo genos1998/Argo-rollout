@@ -13,7 +13,6 @@ data:
     "accountName": "logEalastic1",
     "index": "kubernetes*",
     "filterKey": "kubernetes.pod_name",
-    "autoBaseline": false,
     "sensitivity": "high",
     "tags": [
     {
@@ -27,11 +26,6 @@ data:
       "string": "JunaidError",
       "topic": "ERROR",
       "type": "custom"
-    },
-    {
-      "string": "OnOutOfMemoryError",
-      "topic": "CRITICAL",
-      "type": "default"
     },
     {
       "string": "StackOverflowError",
@@ -140,9 +134,4 @@ data:
     }
     ],
     "responseKeywords": "log",
-    "verificationType": "VERIFICATION",
-    "infoScoring": false,
-    "contextualCluster": false,
-    "contextualWindowSize": 25,
-    "tagEnabled": false
     }
