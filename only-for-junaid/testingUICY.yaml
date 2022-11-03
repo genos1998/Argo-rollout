@@ -13,7 +13,6 @@ data:
     "accountName": "logEalastic1",
     "index": "kubernetes*",
     "filterKey": "kubernetes.pod_name",
-    "sensitivity": "high",
     "tags": [
     {
       "string": "JunaidError",
