@@ -10,7 +10,7 @@ data:
     "templateName": "testingUI",
     "monitoringProvider": "ELASTICSEARCH",
     "scoringAlgorithm": "Canary",
-    "accountName": "logEalastic1",
+    "accountName": "abracadabra",
     "index": "kubernetes*",
     "namespace": null,
     "regExFilter": false,
