@@ -12,6 +12,23 @@ data:
      "percent_diff_threshold": "hard",
       "isNormalize": false,
       "groups": [
+      {
+        "metrics": [
+          {
+            "metricType": "ADVANCED",
+            "metricWeight": 1,
+            "nanStrategy": "Remove",
+            "accountName": "isd312-saas-prom",
+            "riskDirection": "HigherOrLower",
+            "customThresholdHigher": 100,
+            "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})",
+            "criticality": "Normal",
+            "customThresholdLower": 100,
+            "watchlist": false
+          }
+        ],
+        "group": "Memory Usage By Pod Name"
+      }
     ]
   },
   "templateName": "metrixy",
