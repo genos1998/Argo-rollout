@@ -7,7 +7,7 @@ data:
  TemplateType: Metric
  Json: |
   {
-   "filterKey": "${namespace_key},${pod_key},${app_name}",
+   "filterKey": "",
    "data": {
      "percent_diff_threshold": "hard",
       "isNormalize": false,
