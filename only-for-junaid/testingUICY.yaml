@@ -8,8 +8,8 @@ data:
  Json: |
    {
     "templateName": "testingsrikanth",
-    "monitoringProvider": "ELASTICSEARCH",
-    "accountName": "",
+    "monitoringProvider": "",
+    "accountName": "logEalastic1",
     "index": "kubernetes*",
     "filterKey": "kubernetes.pod_name",
     "tags": [
