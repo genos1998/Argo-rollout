@@ -10,7 +10,7 @@ data:
     "templateName": "testingsrikanth",
     "monitoringProvider": "ELASTICSEARCH",
     "accountName": "logEalastic1",
-    "index": "kubernetes*",
+    "index": "",
     "filterKey": "kubernetes.pod_name",
     "tags": [
     {
@@ -26,5 +26,5 @@ data:
       "type": "default"
     }
     ],
-    "responseKeywords": ""
+    "responseKeywords": "log"
     }
