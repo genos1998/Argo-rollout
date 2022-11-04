@@ -7,8 +7,8 @@ data:
  TemplateType: LOG
  Json: |
    {
-    "templateName": "testingsrikanth",
-    "monitoringProvider": "",
+    "templateName": "",
+    "monitoringProvider": "ELASTICSEARCH",
     "accountName": "logEalastic1",
     "index": "kubernetes*",
     "filterKey": "kubernetes.pod_name",
