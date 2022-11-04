@@ -18,7 +18,7 @@ data:
             "metricType": "ADVANCED",
             "metricWeight": 1,
             "nanStrategy": "Remove",
-            "accountName": "",
+            "accountName": "abrcadabra",
             "riskDirection": "HigherOrLower",
             "customThresholdHigher": 40,
             "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})",
@@ -32,5 +32,5 @@ data:
     ]
   },
   "templateName": "metrixy",
-  "advancedProvider": "PROMETHEUS"
+  "advancedProvider": ""
   }
