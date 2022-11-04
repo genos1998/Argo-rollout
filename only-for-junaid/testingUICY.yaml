@@ -9,9 +9,9 @@ data:
    {
     "templateName": "testingsrikanth",
     "monitoringProvider": "ELASTICSEARCH",
-    "accountName": "logEalastic1",
+    "accountName": "",
     "index": "kubernetes*",
-    "filterKey": "",
+    "filterKey": "kubernetes.pod_name",
     "tags": [
     {
       "string": "JunaidError",
