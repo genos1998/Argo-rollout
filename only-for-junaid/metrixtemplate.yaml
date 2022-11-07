@@ -20,10 +20,10 @@ data:
             "nanStrategy": "Remove",
             "accountName": "isd312-saas-prom",
             "riskDirection": "HigherOrLower",
-            "customThresholdHigher": 100,
+            "customThresholdHigher": 10,
             "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})",
             "criticality": "Normal",
-            "customThresholdLower": 100,
+            "customThresholdLower": 10,
             "watchlist": false
           }
         ],
