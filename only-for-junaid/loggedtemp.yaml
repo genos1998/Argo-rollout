@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: testingsrikanth
+  name: loggedtemp
 data: 
  Template: ISDTemplate
  TemplateType: LOG
  Json: |
    {
-    "templateName": "testingsrikanth",
+    "templateName": "loggedtemp",
     "monitoringProvider": "ELASTICSEARCH",
     "accountName": "logEalastic1",
     "index": "kubernetes*",
