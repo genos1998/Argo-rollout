@@ -16,15 +16,35 @@ spec:
           application: final-tests
           gateUrl: https://isd-dev.argo-dev.opsmx.net/
           user: admin
-          intervalTime: 3
+          intervalTime: 15
           lookBackType: growing
-          lifetimeMinutes: 3
-          gitops: true
+          lifetimeMinutes: 180
           threshold:
             pass: 90
             marginal: 65
+          globalLogTemplate: logtemp
           services:  
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.baseline-hash}}.*"    
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"
+            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
+            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
+            metricTemplateName: "PrometheusMetricTemplate" 
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.baseline-hash}}.*"
+            metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+            baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
+            canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
+            metricTemplateName: "PrometheusMetricTemplate" 
           - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
             baselineMetricScope: "argocd,{{args.baseline-hash}},demoapp-issuegen"
             canaryMetricScope: "argocd,{{args.canary-hash}},demoapp-issuegen"
-            metricTemplateName: "metrixtemplate" 
+            metricTemplateName: "PrometheusMetricTemplate" 
+          - logScopeVariables: "kubernetes.pod_name"
+            baselineLogScope: ".*{{args.baseline-hash}}.*"
+            canaryLogScope: ".*{{args.canary-hash}}.*"  
