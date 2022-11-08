@@ -16,15 +16,8 @@ data:
         "metrics": [
           {
             "metricType": "ADVANCED",
-            "metricWeight": 1,
-            "nanStrategy": "Remove",
             "accountName": "isd312-saas-prom",
-            "riskDirection": "HigherOrLower",
-            "customThresholdHigher": 10,
-            "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})",
-            "criticality": "Normal",
-            "customThresholdLower": 10,
-            "watchlist": false
+            "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
           }
         ],
         "group": "Memory Usage By Pod Name"
