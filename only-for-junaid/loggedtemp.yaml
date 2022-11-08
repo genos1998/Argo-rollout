@@ -12,5 +12,12 @@ data:
     "accountName": "logEalastic1",
     "index": "kubernetes*",
     "filterKey": "kubernetes.pod_name",
+    "errorTopics": [
+    {
+      "string": "WARNING",
+      "topic": "WARN",
+      "type": "default"
+    }
+    ],
     "responseKeywords": "log"
     }
