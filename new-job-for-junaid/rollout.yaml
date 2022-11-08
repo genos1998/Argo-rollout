@@ -1,10 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: rollouts-demo
+  name: junaid-on-job
   namespace: argo-rollouts
 spec:
-  replicas: 3
+  replicas: 4
+  selector:
+    matchLabels:
+      app: junaid-on-job
   strategy:
     canary:
       analysis:
@@ -15,28 +18,69 @@ spec:
           value: rollout-arg-value
       steps:
       - setWeight: 20
-      - pause: {duration: 30s}
+      - pause: { duration: 15s }
+        - analysis:
+            templates:
+              - templateName: junaid-job-analysis
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
       - setWeight: 40
-      - pause: {duration: 30s}
+      - pause: { duration: 15s }
+        - analysis:
+            templates:
+              - templateName: junaid-job-analysis
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
       - setWeight: 60
-      - pause: {duration: 30s}
+      - pause: { duration: 15s }
+        - analysis:
+            templates:
+              - templateName: junaid-job-analysis
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
       - setWeight: 80
-      - pause: {duration: 30s}
+      - pause: { duration: 15s }
+        - analysis:
+            templates:
+              - templateName: junaid-job-analysis
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
   revisionHistoryLimit: 2
-  selector:
-    matchLabels:
-      app: rollouts-demo
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus_io_path: '/mgmt/prometheus'
+        prometheus_io_port: '8088' 
       labels:
-        app: rollouts-demo
+        app: junaid-on-job
       annotations:
         forceNewRevision: b
     spec:
       nodeSelector:
         kubernetes.io/arch: amd64
       containers:
-      - name: rollouts-demo
+      - name: junaid-on-job
         image: docker.io/opsmxdev/issuegen:v3.0.9
         ports:
         - name: http
