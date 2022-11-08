@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: getenv
+  name: junaid-job-analysis
   namespace: argo-rollouts 
 spec:
   args:
-  - name: template-arg-key
-    value: template-arg-value
+  - name: canary-hash
+  - name: baseline-hash
   metrics:
-  - name: getenv
+  - name: junaid-job-analysis
     provider:
       job:
         spec:
@@ -16,12 +16,20 @@ spec:
             spec:
               serviceAccountName: svc-acc
               containers:
-              - name: getenv
-                image: shraddhaopsmx/test-code:v3
+              - name: junaid-job-analysis
+                image: genos1998/argojob:v1
                 env:
                 - name: MY_POD_NAME
                   valueFrom:
                     fieldRef:
-                      fieldPath: metadata.name    
+                      fieldPath: metadata.name
+                - name: STABLE_POD_HASH
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: args.baseline-hash
+                - name: LATEST_POD_HASH
+                  valueFrom:
+                    fieldRef:
+                      fieldPath: args.canary-hash
               restartPolicy: Never
           backoffLimit: 2
