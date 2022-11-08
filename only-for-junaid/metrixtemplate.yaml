@@ -9,6 +9,7 @@ data:
   {
    "filterKey": "${namespace_key},${pod_key},${app_name}",
    "data": {
+   "percent_diff_threshold": "hard",
       "groups": [
       {
         "metrics": [
