@@ -10,12 +10,6 @@ spec:
       app: junaid-on-job
   strategy:
     canary:
-      analysis:
-        templates:
-          - templateName: junaid-job-analysis
-        args:
-          - name: rollout-arg-key
-            value: rollout-arg-value
       steps:
         - setWeight: 20
         - pause: { duration: 15s }
