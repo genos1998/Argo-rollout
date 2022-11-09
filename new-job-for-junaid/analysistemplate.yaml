@@ -2,7 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
   name: junaid-job-analysis
-  namespace: argo-rollouts 
 spec:
   args:
   - name: canary-hash
