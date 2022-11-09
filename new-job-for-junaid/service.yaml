@@ -4,9 +4,8 @@ metadata:
   name: junaid-on-job
 spec:
   ports:
-  - port: 80
-    targetPort: http
-    protocol: TCP
-    name: http
+  - protocol: TCP
+    port: 80
+    targetPort: 8088
   selector:
     app: junaid-on-job
