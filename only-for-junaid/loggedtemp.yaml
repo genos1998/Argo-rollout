@@ -15,7 +15,8 @@ data:
     "tags": [
     {
       "string": "outOfmemory",
-      "tag": "Customtag"
+      "tag": "Customtag",
+      "id": ""
     }
       ],
     "errorTopics": [
