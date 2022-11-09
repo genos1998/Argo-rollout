@@ -30,8 +30,6 @@ spec:
                   volumeMounts:
                     - name: provider-config-volume
                       mountPath: /etc/config/provider
-                    - name: template-config-volume
-                      mountPath: /etc/config/templates
                     - name: secret-config-volume
                       mountPath: /etc/config/secrets
                       readOnly: true
@@ -40,9 +38,6 @@ spec:
                 - name: provider-config-volume
                   configMap:
                     name: opsmx-provider-config
-                - name: template-config-volume
-                  configMap:
-                    name: isd-data-collectors
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-profile-v5
