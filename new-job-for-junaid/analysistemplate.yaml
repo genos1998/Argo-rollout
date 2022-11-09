@@ -11,29 +11,30 @@ spec:
       provider:
         job:
           spec:
+            backoffLimit: 2
             template:
               spec:
                 serviceAccountName: svc-acc
                 containers:
-                  - name: junaid-job-analysis
-                    image: 'genos1998/argojob:v1'
-                    env:
-                      - name: MY_POD_NAME
-                        valueFrom:
-                          fieldRef:
-                            fieldPath: metadata.name
-                      - name: STABLE_POD_HASH
-                        value: {{args.baseline-hash}}
-                      - name: LATEST_POD_HASH
-                        value: {{args.canary-hash}}
-                    volumeMounts:
-                      - name: provider-config-volume
-                        mountPath: /etc/config/provider
-                      - name: template-config-volume
-                        mountPath: /etc/config/templates
-                      - name: secret-config-volume
-                        mountPath: /etc/config/secrets
-                        readOnly: true
+                - name: junaid-job-analysis
+                  image: 'genos1998/argojob:v1'
+                  env:
+                    - name: MY_POD_NAME
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.name
+                    - name: STABLE_POD_HASH
+                      value: "{{args.baseline-hash}}"
+                    - name: LATEST_POD_HASH
+                      value: "{{args.canary-hash}}"
+                  volumeMounts:
+                    - name: provider-config-volume
+                      mountPath: /etc/config/provider
+                    - name: template-config-volume
+                      mountPath: /etc/config/templates
+                    - name: secret-config-volume
+                      mountPath: /etc/config/secrets
+                      readOnly: true
                 restartPolicy: Never
                 volumes:
                 - name: provider-config-volume
@@ -46,4 +47,3 @@ spec:
                   secret:
                     secretName: opsmx-profile-v5
                     optional: false
-            backoffLimit: 2
