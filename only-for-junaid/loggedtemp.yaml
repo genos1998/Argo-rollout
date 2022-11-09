@@ -14,9 +14,8 @@ data:
     "filterKey": "kubernetes.pod_name",
     "tags": [
     {
-      "string": "JunaidError",
-      "tag": "Hello",
-      "id": ""
+      "string": "outOfmemory",
+      "tag": "Customtag"
     }
       ],
     "errorTopics": [
