@@ -68,16 +68,9 @@ spec:
       labels:
         app: junaid-on-job
     spec:
-      nodeSelector:
-        kubernetes.io/arch: amd64
       containers:
-        - name: junaid-on-job
-          image: 'docker.io/opsmxdev/issuegen:v3.0.9'
+        - name: rollouts-baseline
+          image: docker.io/opsmxdev/issuegen:v3.0.6
+          imagePullPolicy: Always
           ports:
-            - name: http
-              containerPort: 8080
-              protocol: TCP
-          resources:
-            requests:
-              memory: 32Mi
-              cpu: 5m
+            - containerPort: 8088
