@@ -18,8 +18,7 @@ spec:
             value: rollout-arg-value
       steps:
         - setWeight: 20
-        - pause:
-            duration: 15s
+        - pause: { duration: 15s }
         - analysis:
             templates:
               - templateName: junaid-job-analysis
@@ -31,8 +30,7 @@ spec:
                 valueFrom:
                   podTemplateHashValue: Stable
         - setWeight: 40
-        - pause:
-            duration: 15s
+        - pause: { duration: 15s }
         - analysis:
             templates:
               - templateName: junaid-job-analysis
@@ -44,8 +42,7 @@ spec:
                 valueFrom:
                   podTemplateHashValue: Stable
         - setWeight: 60
-        - pause:
-            duration: 15s
+        - pause: { duration: 15s }
         - analysis:
             templates:
               - templateName: junaid-job-analysis
@@ -57,8 +54,7 @@ spec:
                 valueFrom:
                   podTemplateHashValue: Stable
         - setWeight: 80
-        - pause:
-            duration: 15s
+        - pause: { duration: 15s }
         - analysis:
             templates:
               - templateName: junaid-job-analysis
