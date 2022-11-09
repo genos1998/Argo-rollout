@@ -27,6 +27,8 @@ spec:
                       value: "{{args.baseline-hash}}"
                     - name: LATEST_POD_HASH
                       value: "{{args.canary-hash}}"
+                    - name: PROVIDER_CONFIG
+                      value: opsmx-provider-config
                   volumeMounts:
                     - name: provider-config-volume
                       mountPath: /etc/config/provider
