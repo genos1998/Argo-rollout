@@ -10,14 +10,8 @@ metadata:
   name: job-acc
 rules:
   - apiGroups:
-      - "apps"
       - "batch"
-      - "v1"
-      - "argoproj.io"
     resources:
-      - pods
-      - jobs
-      - analysisruns
       - jobs/status
     verbs:
       - get
