@@ -17,7 +17,7 @@ spec:
                 serviceAccountName: job-acc
                 containers:
                 - name: junaid-job-analysis
-                  image: 'genos1998/argojob:v10'
+                  image: 'genos1998/argojob:v11'
                   env:
                     - name: MY_POD_NAME
                       valueFrom:
