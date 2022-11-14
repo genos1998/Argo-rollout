@@ -11,7 +11,8 @@ data:
     intervalTime: 3
     lookBackType: sliding
     globalLogTemplate: loggytemp
-    marginalScore: 60
+    passScore: 95
+    marginalScore: 95
     serviceList:
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
