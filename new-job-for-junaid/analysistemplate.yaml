@@ -32,8 +32,6 @@ spec:
                       mountPath: /etc/config/provider
                     - name: metric-config-volume
                       mountPath: /etc/config/templates/metrixtemplate
-                    - name: log-config-volume
-                      mountPath: /etc/config/templates/loggytemplate
                     - name: secret-config-volume
                       mountPath: /etc/config/secrets
                       readOnly: true
@@ -45,9 +43,6 @@ spec:
                 - name: metric-config-volume
                   configMap:
                     name: metrixtemplate
-                - name: log-config-volume
-                  configMap:
-                    name: loggytemplate
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-profile-v5
