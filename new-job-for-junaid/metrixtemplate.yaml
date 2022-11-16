@@ -2,12 +2,13 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: metrixtemplates
-data: |
-  {
-   "filterKey": "${namespace_key},${pod_key},${app_name}",
-   "data": {
-   "percent_diff_threshold": "hard",
-   "isNormalize": false,
+data:
+  metrixtemplates: |
+    {
+    "filterKey": "${namespace_key},${pod_key},${app_name}",
+    "data": {
+    "percent_diff_threshold": "hard",
+    "isNormalize": false,
       "groups": [
       {
         "metrics": [
@@ -23,7 +24,7 @@ data: |
         "group": "Memory Usage By Pod Name"
       }
     ]
-  },
-  "templateName": "metrixtemplates",
-  "advancedProvider": "PROMETHEUS"
-  }
+    },
+    "templateName": "metrixtemplates",
+    "advancedProvider": "PROMETHEUS"
+    }
