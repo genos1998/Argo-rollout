@@ -19,6 +19,3 @@ data:
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
       metricTemplateName: "metrixtemplate" 
-      logScopeVariables: "kubernetes.pod_name"
-      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
