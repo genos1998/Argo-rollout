@@ -15,7 +15,6 @@ data:
       {
         "metrics": [
           {
-            "metricType": "ADVANCED",
             "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
           }
         ],
