@@ -16,10 +16,6 @@ data:
         "metrics": [
           {
             "metricType": "ADVANCED",
-            "accountName": "isd312-saas-prom",
-            "riskDirection": "HigherOrLower",
-            "customThresholdHigher": 100,
-            "customThresholdLower": 100,
             "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
           }
         ],
