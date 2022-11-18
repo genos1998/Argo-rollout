@@ -20,6 +20,6 @@ data:
       metricTemplateName: "metrixtemplates"
     - logTemplateName: templateLogTemplate
       logScopeVariables: "kubernetes.pod_name"
-      baselineLogScope: ".*{{args.baseline-hash}}.*"
-      canaryLogScope: ".*{{args.canary-hash}}.*"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateVersion: "v4.0"
