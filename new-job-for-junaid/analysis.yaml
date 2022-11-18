@@ -11,11 +11,15 @@ data:
     intervalTime: 3
     lookBackType: sliding
     gitops: true
-    globalLogTemplate: loggytemp
     passScore: 90
     marginalScore: 90
     serviceList:
     - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
-      metricTemplateName: "metrixtemplates" 
+      metricTemplateName: "metrixtemplates"
+    - logTemplateName: templateLogTemplate
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{args.baseline-hash}}.*"
+      canaryLogScope: ".*{{args.canary-hash}}.*"
+      logTemplateVersion: "v4.0"
