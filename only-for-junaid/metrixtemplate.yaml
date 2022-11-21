@@ -3,6 +3,7 @@ kind: ConfigMap
 metadata:
   name: metricstemplates
 data:
+  Template: "ISDTemplate"
   metrixtemplates: |
     {
     "filterKey": "${namespace_key},${pod_key},${app_name}",
