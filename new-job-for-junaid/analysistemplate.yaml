@@ -15,9 +15,12 @@ spec:
             template:
               spec:
                 serviceAccountName: job-acc
+                imagePullSecrets:
+                - name: opsmx11-secret
                 containers:
                 - name: junaid-job-analysis
-                  image: 'opsmx11/argo-isd-metric-provider:jobv1'
+                  image: 'opsmx11/argo-isd-metric-provider-job:v1' 
+                  imagePullPolicy: Always
                   env:
                     - name: MY_POD_NAME
                       valueFrom:
