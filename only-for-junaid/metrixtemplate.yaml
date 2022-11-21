@@ -4,6 +4,7 @@ metadata:
   name: metricstemplates
 data:
   Template: "ISDTemplate"
+  TemplateType: "metric"
   Json: |
     {
     "filterKey": "${namespace_key},${pod_key},${app_name}",
