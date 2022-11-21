@@ -16,7 +16,7 @@ data:
         "metrics": [
           {
             "metricType": "ADVANCED",
-            "accountName": "isd312-saas-prom",
+            "accountName": "isd312-saas-pom",
             "riskDirection": "HigherOrLower",
             "customThresholdHigher": 10,
             "customThresholdLower": 10,
