@@ -17,7 +17,7 @@ spec:
                 serviceAccountName: job-acc
                 containers:
                 - name: junaid-job-analysis
-                  image: 'opsmx11/argo-isd-metric-provider-job:v1'
+                  image: 'opsmx11/argo-isd-metric-provider:jobv1'
                   env:
                     - name: MY_POD_NAME
                       valueFrom:
