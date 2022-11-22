@@ -6,7 +6,7 @@ data:
   providerConfig: |
     application: final-job
     user: admin
-    gateUrl: 'https://isd-argocd.isd-dev.opsmx.net/'
+    gateUrl: 'https://isd-dev.argo-dev.opsmx.net/'
     lifetimeMinutes: 3
     intervalTime: 3
     lookBackType: sliding
