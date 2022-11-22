@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  cd-integration: dHJ1ZQ==
+  gate-url: aHR0cHM6Ly9pc2QtYXJnb2NkLmlzZC1kZXYub3BzbXgubmV0
+  source-name: YXJnb2NkLWlzZA==
+  user: dXNlcjI=
+kind: Secret
+metadata:
+  name: opsmx-profile-test
+type: Opaque
