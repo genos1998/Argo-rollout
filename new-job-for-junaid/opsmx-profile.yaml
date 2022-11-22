@@ -1,0 +1,17 @@
+apiVersion: v1
+data:
+  cd-integration: dHJ1ZQ==
+  gate-url: aHR0cHM6Ly9pc2QtYXJnb2NkLmlzZC1kZXYub3BzbXgubmV0
+  source-name: YXJnb2NkLWlzZA==
+  user: dXNlcjI=
+kind: Secret
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"cd-integration":"dHJ1ZQ==","gate-url":"aHR0cHM6Ly9vZXMtYXJnb3FhLmlzZC1kZXYub3BzbXgubmV0","source-name":"YXJnb2Nk","user":"dXNlcjI="},"kind":"Secret","metadata":{"annotations":{},"name":"opsmx-profile","namespace":"argocd-gitpr"},"type":"Opaque"}
+  creationTimestamp: "2022-10-27T08:06:14Z"
+  name: opsmx-profile
+  namespace: argocd-gitpr
+  resourceVersion: "247507231"
+  uid: 95d13a05-cf2f-4af5-b6e4-1a28228d2fb6
+type: Opaque
