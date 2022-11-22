@@ -22,3 +22,9 @@ data:
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateVersion: "v1.0"
+    - metricTemplateName: "metricMissionFailMid"
+      metricTemplateVersion: "v4.0"
+      metricScopeVariables: "namespace_key,pod_key"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+      
