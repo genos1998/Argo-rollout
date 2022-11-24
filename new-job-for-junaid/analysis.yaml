@@ -17,16 +17,10 @@ data:
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
       metricTemplateName: "metrixtemplates"
-    - logTemplateName: templateLogTemplate
-      logScopeVariables: "kubernetes.pod_name"
+    - logTemplateName: stacky
+      logScopeVariables: "resource.labels.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
-      logTemplateVersion: "v1.0"
-    - metricTemplateName: "metricMissionFailMid"
-      metricTemplateVersion: "v4.0"
-      metricScopeVariables: "namespace_key,pod_key"
-      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
-      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
     - logTemplateName: loggytemplate
       logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
