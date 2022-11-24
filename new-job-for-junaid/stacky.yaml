@@ -5,7 +5,7 @@ metadata:
 data:
   stacky: |
     {
-      "templateName": "stackdriver-log-validator",
+      "templateName": "stacky",
       "monitoringProvider": "STACKDRIVER",
       "accountName": "oes-cluster-sd",
       "filterKey": "resource.labels.pod_name",
