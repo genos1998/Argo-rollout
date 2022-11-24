@@ -54,5 +54,5 @@ spec:
                         name: stacky
                 - name: secret-config-volume
                   secret:
-                    secretName: opsmx-cd-profile
+                    secretName: opsmx-profile-v5
                     optional: false
