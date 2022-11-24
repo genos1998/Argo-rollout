@@ -12,7 +12,7 @@ data:
     lookBackType: sliding
     gitops: true
     passScore: 90
-    serviceList:
+    serviceList: 
     - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
@@ -27,4 +27,8 @@ data:
       metricScopeVariables: "namespace_key,pod_key"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+    - logTemplateName: loggytemplate
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       
