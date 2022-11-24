@@ -33,7 +33,7 @@ spec:
                   volumeMounts:
                     - name: provider-config-volume
                       mountPath: /etc/config/provider
-                    - name: gitopsTemplates
+                    - name: gitopstemplates
                       mountPath: /etc/config/templates
                     - name: secret-config-volume
                       mountPath: /etc/config/secrets
@@ -43,7 +43,7 @@ spec:
                 - name: provider-config-volume
                   configMap:
                     name: opsmx-provider-config
-                - name: gitopsTemplates
+                - name: gitopstemplates
                   projected:
                     sources:
                     - configMap:
