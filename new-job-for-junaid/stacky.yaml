@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: stacky
+data:
+  stacky: |
+    {
+      "templateName": "stackdriver-log-validator",
+      "monitoringProvider": "STACKDRIVER",
+      "accountName": "oes-cluster-sd",
+      "filterKey": "resource.labels.pod_name",
+      "tags": [],
+      "errorTopics": [
+        {
+          "string": "OnOutOfMemoryError",
+          "topic": "CRITICAL",
+          "type": "default"
+        }
+      ],
+      "responseKeywords": "textPayload"
+    }
