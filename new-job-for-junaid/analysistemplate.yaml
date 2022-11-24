@@ -50,6 +50,8 @@ spec:
                         name: metrixtemplates
                     - configMap:
                         name: loggytemplate
+                    - configMap:
+                        name: stacky
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-profile-v5
