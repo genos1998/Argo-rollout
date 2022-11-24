@@ -33,11 +33,7 @@ spec:
                   volumeMounts:
                     - name: provider-config-volume
                       mountPath: /etc/config/provider
-                    - name: metric-config-volume
-                      mountPath: /etc/config/templates
-                      subPath: metrixtemplates
-                    - name: log-config-volume
-                      subPath: loggytemplate
+                    - name: gitopsTemplates
                       mountPath: /etc/config/templates
                     - name: secret-config-volume
                       mountPath: /etc/config/secrets
@@ -47,12 +43,13 @@ spec:
                 - name: provider-config-volume
                   configMap:
                     name: opsmx-provider-config
-                - name: metric-config-volume
-                  configMap:
-                    name: metrixtemplates
-                - name: log-config-volume
-                  configMap:
-                    name: loggytemplate
+                - name: gitopsTemplates
+                  projected:
+                    sources:
+                    - configMap:
+                        name: metrixtemplates
+                    - configMap:
+                        name: loggytemplate
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-profile-v5
