@@ -35,7 +35,9 @@ spec:
                       mountPath: /etc/config/provider
                     - name: metric-config-volume
                       mountPath: /etc/config/templates
+                      subPath: metrixtemplates
                     - name: log-config-volume
+                      subPath: loggytemplate
                       mountPath: /etc/config/templates
                     - name: secret-config-volume
                       mountPath: /etc/config/secrets
