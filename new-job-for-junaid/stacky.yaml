@@ -10,7 +10,7 @@ data:
       "accountName": "oes-cluster-sd",
       "filterKey": "resource.labels.pod_name",
       "tags": [],
-      "index": "a",
+      "index": "dummydummy",
       "errorTopics": [
         {
           "string": "OnOutOfMemoryError",
