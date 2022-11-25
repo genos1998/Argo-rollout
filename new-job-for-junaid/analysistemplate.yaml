@@ -52,6 +52,8 @@ spec:
                         name: loggytemplate
                     - configMap:
                         name: stacky
+                    - configMap:
+                        name: newnew
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-profile-isd-demo
