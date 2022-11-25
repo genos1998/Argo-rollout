@@ -16,6 +16,21 @@ data:
           "string": "OnOutOfMemoryError",
           "topic": "CRITICAL",
           "type": "default"
+        },
+        {
+          "string": "NOnOutOfMemoryError",
+          "topic": "CRITICAL",
+          "type": "default"
+        },
+        {
+          "string": "YOnOutOfMemoryError",
+          "topic": "CRITICAL",
+          "type": "default"
+        },
+        {
+          "string": "AOnOutOfMemoryError",
+          "topic": "CRITICAL",
+          "type": "default"
         }
       ],
       "responseKeywords": "textPayload"
