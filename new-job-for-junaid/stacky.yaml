@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: stacky-map-v2
+  name: stacky-map-v3
 data:
-  stacky-map-v2: |
+  stacky-map-v3: |
     {
-      "templateName": "stacky-map-v2",
+      "templateName": "stacky-map-v3",
       "monitoringProvider": "STACKDRIVER",
       "accountName": "oes-cluster-sd",
       "filterKey": "resource.labels.pod_name",
