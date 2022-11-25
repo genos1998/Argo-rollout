@@ -51,7 +51,7 @@ spec:
                     - configMap:
                         name: loggytemplate
                     - configMap:
-                        name: stacky-map-v2
+                        name: stacky-map-v3
                     - configMap:
                         name: newnew
                 - name: secret-config-volume
