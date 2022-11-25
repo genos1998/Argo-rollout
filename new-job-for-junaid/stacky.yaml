@@ -8,6 +8,7 @@ data:
       "templateName": "stacky-map-v3",
       "monitoringProvider": "STACKDRIVER",
       "accountName": "oes-cluster-sd",
+      "scoringAlgorithm": "Canary",
       "filterKey": "resource.labels.pod_name",
       "tags": [],
       "index": "zy",
