@@ -4,7 +4,7 @@ metadata:
   name: opsmx-provider-config
 data:
   providerConfig: |
-    application: final-job
+    application: final-jobs
     user: admin
     gateUrl: 'https://isd-demo.argo-dev.opsmx.net'
     lifetimeMinutes: 3
