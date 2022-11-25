@@ -7,7 +7,7 @@ data:
     {
      "templateName": "loggytemplate",
      "monitoringProvider": "ELASTICSEARCH",
-     "accountName": "logElastic1",
+     "accountName": "logEalastic1",
      "index": "kubernetes*",
      "filterKey": "kubernetes.pod_name",
      "tags": [],
