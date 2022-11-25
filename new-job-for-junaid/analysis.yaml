@@ -21,3 +21,7 @@ data:
       logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - metricScopeVariables: "${app_key},${host_key}"
+      baselineMetricScope: "issuegen-exp-ss1-app1,nr-isd-exp-ss1-baseline.*"
+      canaryMetricScope: "issuegen-exp-ss1-app1,nr-isd-exp-ss1-canary.*"
+      metricTemplateName: "newnew"
