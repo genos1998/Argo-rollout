@@ -112,11 +112,6 @@ data:
           "string": "ERROR",
           "topic": "ERROR",
           "type": "default"
-        },
-        {
-          "string": "WARN",
-          "topic": "WARN",
-          "type": "default"
         }
       ],
       "responseKeywords": "textPayload"
