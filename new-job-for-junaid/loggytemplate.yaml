@@ -123,11 +123,6 @@ data:
         "string": "WARN",
         "topic": "WARN",
         "type": "default"
-      },
-      {
-        "string": "WARNING",
-        "topic": "WARN",
-        "type": "default"
       }
      ],
      "responseKeywords": "log"
