@@ -16,11 +16,6 @@ data:
           "string": "OnOutOfMemoryError",
           "topic": "CRITICAL",
           "type": "default"
-        },
-        {
-          "string": "StackOverflowError",
-          "topic": "CRITICAL",
-          "type": "default"
         }
       ],
       "responseKeywords": "textPayload"
