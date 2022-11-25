@@ -5,26 +5,98 @@ metadata:
 data:
   metrixtemplates: |
     {
-    "filterKey": "${namespace_key},${pod_key},${app_name}",
-    "data": {
-    "percent_diff_threshold": "hard",
-    "isNormalize": false,
-      "groups": [
-      {
-        "metrics": [
+      "filterKey": "${namespace_key},${pod_key},${app_name}",
+      "data": {
+        "percent_diff_threshold": "hard",
+        "isNormalize": false,
+        "groups": [
           {
-            "metricType": "ADVANCED",
-            "accountName": "isd312-saas-prom",
-            "riskDirection": "HigherOrLower",
-            "customThresholdHigher": 100,
-            "customThresholdLower": 100,
-            "name": "sum(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
+            "metrics": [
+              {
+                "metricType": "ADVANCED",
+                "metricWeight": 1,
+                "nanStrategy": "ReplaceWithZero",
+                "accountName": "isd312-saas-prom",
+                "riskDirection": "Higher",
+                "customThresholdHigher": 70,
+                "name": "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)",
+                "criticality": "Normal",
+                "customThresholdLower": "10",
+                "watchlist": false
+              }
+            ],
+            "group": "CPU Usage By Pod Name"
+          },
+          {
+            "metrics": [
+              {
+                "metricType": "ADVANCED",
+                "metricWeight": 1,
+                "nanStrategy": "ReplaceWithZero",
+                "accountName": "prometheus",
+                "riskDirection": "Higher",
+                "customThresholdHigher": 70,
+                "name": "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))",
+                "criticality": "Normal",
+                "customThresholdLower": "10",
+                "watchlist": false
+              }
+            ],
+            "group": "Memory Usage By Pod Name"
+          },
+          {
+            "metrics": [
+              {
+                "metricType": "ADVANCED",
+                "metricWeight": 1,
+                "nanStrategy": "ReplaceWithZero",
+                "accountName": "prometheus",
+                "riskDirection": "Higher",
+                "customThresholdHigher": 90,
+                "name": "sum(rate(http_server_requests_seconds_sum{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m])) / sum(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m]))",
+                "criticality": "Normal",
+                "customThresholdLower": "10",
+                "watchlist": false
+              }
+            ],
+            "group": "Application Latency"
+          },
+          {
+            "metrics": [
+              {
+                "metricType": "ADVANCED",
+                "metricWeight": 1,
+                "nanStrategy": "ReplaceWithZero",
+                "accountName": "isd312-saas-prom",
+                "riskDirection": "Lower",
+                "customThresholdHigher": 50,
+                "name": "avg(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m]))",
+                "criticality": "Normal",
+                "customThresholdLower": 90,
+                "watchlist": false
+              }
+            ],
+            "group": "Application Request Rate"
+          },
+          {
+            "metrics": [
+              {
+                "metricType": "ADVANCED",
+                "metricWeight": 1,
+                "nanStrategy": "ReplaceWithZero",
+                "accountName": "isd312-saas-prom",
+                "riskDirection": "Higher",
+                "customThresholdHigher": 70,
+                "name": "sum(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\",status=~\"^[4-5].*\"}[1m])) or vector(0)",
+                "criticality": "Normal",
+                "customThresholdLower": "10",
+                "watchlist": false
+              }
+            ],
+            "group": "Application Error Rate"
           }
-        ],
-        "group": "Memory Usage By Pod Name"
-      }
-    ]
-    },
-    "templateName": "metrixtemplates",
-    "advancedProvider": "PROMETHEUS"
+        ]
+      },
+      "templateName": "metrixtemplates",
+      "advancedProvider": "PROMETHEUS"
     }
