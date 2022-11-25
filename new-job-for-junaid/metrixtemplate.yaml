@@ -33,10 +33,7 @@ data:
                 "metricType": "ADVANCED",
                 "metricWeight": 1,
                 "accountName": "isd312-saas-prom",
-                "riskDirection": "Higher",
-                "customThresholdHigher": 70,
-                "name": "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))",
-                "watchlist": false
+                "name": "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))"
               }
             ],
             "group": "Memory Usage By Pod Name"
