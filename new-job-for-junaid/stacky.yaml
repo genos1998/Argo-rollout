@@ -11,6 +11,12 @@ data:
       "filterKey": "resource.labels.pod_name",
       "tags": [],
       "index": "a",
-      "errorTopics": [],
+      "errorTopics": [
+        {
+          "string": "StackOverflowError",
+          "topic": "CRITICAL",
+          "type": "default"
+        }
+      ],
       "responseKeywords": "textPayload"
     }
