@@ -43,7 +43,6 @@ data:
           {
             "metrics": [
               {
-                "metricType": "ADVANCED",
                 "metricWeight": 1,
                 "nanStrategy": "ReplaceWithZero",
                 "accountName": "isd312-saas-prom",
