@@ -11,12 +11,6 @@ data:
       "filterKey": "resource.labels.pod_name",
       "tags": [],
       "index": "a",
-      "errorTopics": [
-        {
-          "string": "OnOutOfMemoryError",
-          "topic": "CRITICAL",
-          "type": "default"
-        }
-      ],
+      "errorTopics": [],
       "responseKeywords": "textPayload"
     }
