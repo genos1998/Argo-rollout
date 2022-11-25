@@ -8,6 +8,7 @@ data:
      "templateName": "loggytemplate",
      "monitoringProvider": "ELASTICSEARCH",
      "accountName": "logEalastic1",
+     "scoringAlgorithm": "Canary",
      "index": "kubernetes*",
      "filterKey": "kubernetes.pod_name",
      "tags": [],
