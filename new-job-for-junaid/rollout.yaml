@@ -23,6 +23,10 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
+          resources:
+          requests:
+            memory: 32Mi
+            cpu: 5m
   strategy:
     canary:
       steps:
