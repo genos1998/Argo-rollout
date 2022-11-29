@@ -8,7 +8,7 @@ spec:
     - name: baseline-hash
   metrics:
     - name: junaid-job-analysis
-      initialDelay: 90s
+      initialDelay: 120s
       provider:
         job:
           spec:
