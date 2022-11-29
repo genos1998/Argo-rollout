@@ -22,8 +22,8 @@ data:
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
     - metricScopeVariables: "${app_key},${host_key}"
-      baselineMetricScope: "issuegen-exp-ss1-app1,nr-isd-exp-ss1-baseline.*"
-      canaryMetricScope: "issuegen-exp-ss1-app1,nr-isd-exp-ss1-canary.*"
+      baselineMetricScope: "issuegen-exp-ss1-app1,.*{{env.STABLE_POD_HASH}}.*"
+      canaryMetricScope: "issuegen-exp-ss1-app1,.*{{env.LATEST_POD_HASH}}.*"
       metricTemplateName: "newnew"
     - logTemplateName: stacky-map-v3
       logScopeVariables: "resource.labels.pod_name"
