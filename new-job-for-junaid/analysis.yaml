@@ -7,8 +7,8 @@ data:
     application: final-job
     user: admin
     gateUrl: 'https://isd-demo.argo-dev.opsmx.net'
-    lifetimeMinutes: 3
-    intervalTime: 3
+    lifetimeMinutes: 4
+    intervalTime: 4
     lookBackType: sliding
     gitops: true
     passScore: 90
