@@ -138,7 +138,7 @@ data:
                 "accountName": "newrelic-argo-isd312-saas",
                 "riskDirection": "HigherOrLower",
                 "customThresholdHigher": 50,
-                "name": "SELECT (average(apm.service.memory.physical) * rate(count(apm.service.instance.count), 1 minute)) / 1000 as memoryUsage FROM Metric WHERE (appName = '${app_key}' AND host RLIKE '.*${pod_key}.*')",
+                "name": "SELECT (average(apm.service.memory.physical) * rate(count(apm.service.instance.count), 1 minute)) / 1000 as memoryUsage FROM Metric WHERE (appName = '${app_key}' AND host RLIKE '.*${host_key}.*')",
                 "criticality": "Normal",
                 "customThresholdLower": 50,
                 "watchlist": false
