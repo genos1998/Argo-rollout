@@ -8,7 +8,7 @@ data:
     user: admin
     gateUrl: 'https://isd-demo.argo-dev.opsmx.net'
     lifetimeMinutes: 4
-    intervalTime: 4
+    intervalTime: 3
     lookBackType: sliding
     gitops: true
     passScore: 90
@@ -29,3 +29,76 @@ data:
       logScopeVariables: "resource.labels.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - logTemplateName: loggytemp
+      logTemplateVersion: "v1.0"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - logTemplateName: templateLogTemplate
+      logTemplateVersion: "v4.0"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - logTemplateName: existing
+      logTemplateVersion: "v1.0"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - logTemplateName: templogdel
+      logTemplateVersion: "v1.0"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
+      metricTemplateName: "metricy"
+      metricTemplateVersion: "v3.0"
+    - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
+      metricTemplateName: "PrometheusMetricTemplate"
+      metricTemplateVersion: "v4.0"
+    - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
+      metricTemplateName: "PrometheusLocalTemplate"
+      metricTemplateVersion: "v4.0"
+    - metricScopeVariables: "${namespace_key},${pod_key}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+      metricTemplateName: "prometheustemplate"
+      metricTemplateVersion: "v1.0"
+      logTemplateName: templogdel
+      logTemplateVersion: "v1.0"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
+      metricTemplateName: "metricy"
+      metricTemplateVersion: "v3.0"
+      logTemplateName: existing
+      logTemplateVersion: "v1.0"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+    - logTemplateName: loggytemp
+      logTemplateVersion: "v1.0"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
+      metricTemplateName: "metrixtemplates"
+    - logTemplateName: loggytemplate
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
+      metricTemplateName: "metricy"
+      metricTemplateVersion: "v3.0"
