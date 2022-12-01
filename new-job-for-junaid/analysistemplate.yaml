@@ -55,6 +55,8 @@ spec:
                         name: stacky-map-v3
                     - configMap:
                         name: newnew
+                    - configMap:
+                        name: yamala
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-profile-isd-demo
