@@ -6,7 +6,7 @@ data:
   loggytemplate: |
     {
       "templateName": "loggytemplate",
-      "monitoringProvider": "ELASTICSEARCH"
+      "monitoringProvider": "ELASTICSEARCH":
       "accountName": "logEalastic1",
       "scoringAlgorithm": "Canary",
       "index": "kubernetes*",
