@@ -15,7 +15,7 @@ data:
               nanStrategy: ReplaceWithZero
               riskDirection: Higher
               customThresholdHigher: 70
-              name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
+              name: "avg(rate(container_cpu_usage_seconds_total{namespace=\`${namespace_key}\`, pod=~\`.*${pod_key}.*\`}[1m]) * 100)"
               criticality: Normal
               customThresholdLower: 10
               watchlist: false
@@ -26,7 +26,7 @@ data:
               nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 50
-              name: "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))"
+              name: "avg(rate(container_memory_usage_bytes{namespace=\`${namespace_key}\`, pod=~\`.*${pod_key}.*\`}[1m]))"
               criticality: Normal
               customThresholdLower: 90
               watchlist: false
@@ -37,7 +37,7 @@ data:
               nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 50
-              name: "sum(rate(http_server_requests_seconds_sum{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m])) / sum(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m]))"
+              name: "sum(rate(http_server_requests_seconds_sum{app=\`${app_name}\`,kubernetes_pod_name=~\`${pod_key}\`}[5m])) / sum(rate(http_server_requests_seconds_count{app=\`${app_name}\`,kubernetes_pod_name=~\`${pod_key}\`}[5m]))"
               criticality: Normal
               customThresholdLower: 90
               watchlist: false
