@@ -21,4 +21,7 @@ data:
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateName: loggytemplate
-      
+    - metricScopeVariables: "${namespace_key},${service},${ingress}"
+      baselineMetricScope: "argocd,rollout-demo-active,rollout-demo-active"
+      canaryMetricScope: "argocd,rollout-demo-preview,rollout-demo-preview"
+      metricTemplateName: "prometheus-nginx-ingress-metric-template"
