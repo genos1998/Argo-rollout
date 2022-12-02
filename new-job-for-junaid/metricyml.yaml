@@ -28,4 +28,4 @@ data:
               customThresholdLower: 90
               watchlist: false
           group: Upstream Service Latency Per Ingress - 90th Percentile
-    advancedProvider: PROMETHEUS
+    advancedProvider: PROMETHEUSYU
