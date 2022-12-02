@@ -15,9 +15,7 @@ data:
               nanStrategy: ReplaceWithZero
               riskDirection: Higher
               customThresholdHigher: 70
-              name: >-
-                avg(rate(nginx_ingress_controller_bytes_sent_count{namespace="${namespace_key}",
-                service= "${service}",ingress = "${ingress}"}[5m]))
+              name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
               criticality: Normal
               customThresholdLower: 10
               watchlist: false
@@ -28,9 +26,7 @@ data:
               nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 50
-              name: >-
-                nginx_ingress_controller_ingress_upstream_latency_seconds{namespace="${namespace_key}",
-                service= "${service}",ingress = "${ingress}", quantile ="0.5"}
+              name: "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))"
               criticality: Normal
               customThresholdLower: 90
               watchlist: false
@@ -41,9 +37,7 @@ data:
               nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 50
-              name: >-
-                nginx_ingress_controller_ingress_upstream_latency_seconds{namespace="${namespace_key}",
-                service= "${service}",ingress = "${ingress}", quantile ="0.9"}
+              name: "sum(rate(http_server_requests_seconds_sum{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m])) / sum(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m]))"
               criticality: Normal
               customThresholdLower: 90
               watchlist: false
