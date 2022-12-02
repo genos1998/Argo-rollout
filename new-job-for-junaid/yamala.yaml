@@ -9,9 +9,6 @@ data:
     scoringAlgorithm: Canary
     index: kubernetes*
     responseKeywords: log
-    tags:
-    - errorString: NOnOutOfMemoryError
-      tag: NotJunaid
     errorTopics:
     - errorString: OnOutOfMemoryError
       topic: CRITICAL
