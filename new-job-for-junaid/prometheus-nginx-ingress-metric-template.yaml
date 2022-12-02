@@ -14,7 +14,7 @@ data:
               metricWeight: 100
               nanStrategy: ReplaceWithZero
               riskDirection: Higher
-              customThresholdHigher: 70
+              customThresholdHigher: 60
               name: "avg(rate(container_cpu_usage_seconds_total{namespace=\'${namespace_key}\', pod=~\'.*${pod_key}.*\'}[1m]) * 100)"
               criticality: Normal
               customThresholdLower: 10
