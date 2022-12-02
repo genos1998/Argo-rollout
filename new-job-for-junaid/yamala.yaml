@@ -6,7 +6,6 @@ data:
   yamala: |
     monitoringProvider: ELASTICSEARCH
     accountName: logEalastic1
-    disableDefaultErrorTopics: yes
     scoringAlgorithm: Canary
     index: kubernetes*
     responseKeywords: log
