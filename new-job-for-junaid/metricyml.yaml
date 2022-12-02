@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prometheus-nginx-ingress-metric-template
+  name: metricyml
 data:
-  prometheus-nginx-ingress-metric-template: |
+  metricyml: |
     accountName: isd312-saas-prom
     metricTemplateSetup:
       percent_diff_threshold: hard
