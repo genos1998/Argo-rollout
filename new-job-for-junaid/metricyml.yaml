@@ -4,7 +4,6 @@ metadata:
   name: metricyml
 data:
   metricyml: |
-    accountName: isd312-saas-prom
     metricTemplateSetup:
       percent_diff_threshold: hard
       isNormalize: false
