@@ -10,8 +10,8 @@ data:
     index: kubernetes*
     responseKeywords: log
     tags:
-    - errorString: NonOutofMemory
-      tag: No
+    - errorString: NOnOutOfMemoryError
+      tag: NotJunaid
     errorTopics:
     - errorString: OnOutOfMemoryError
       topic: CRITICAL
