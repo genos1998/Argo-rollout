@@ -5,8 +5,8 @@ metadata:
 data:
   loggytemplate: |
     {
-      "templateName": "loggystemplate",
-      "monitoringProvider": "ELASTICSEARCH",
+      "templateName": "loggytemplate",
+      "monitoringProvider": "ELASTICSEARCH"
       "accountName": "logEalastic1",
       "scoringAlgorithm": "Canary",
       "index": "kubernetes*",
