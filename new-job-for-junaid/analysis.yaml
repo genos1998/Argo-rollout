@@ -13,10 +13,6 @@ data:
     gitops: true
     passScore: 90
     serviceList: 
-    - logTemplateName: logyml
-      logScopeVariables: "kubernetes.pod_name"
-      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
     - logTemplateName: logymla
       logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
