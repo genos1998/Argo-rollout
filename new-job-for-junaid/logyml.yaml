@@ -9,6 +9,7 @@ data:
     scoringAlgorithm: Canary
     index: kubernetes*
     responseKeywords: log
+    disableDefaultErrorTopics: false
     tags:
     - errorString: NOnOutOfMemoryError
       tag: NotJunaid
