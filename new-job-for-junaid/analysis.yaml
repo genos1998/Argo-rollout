@@ -6,14 +6,14 @@ data:
   providerConfig: |
     application: final-job
     user: admin
-    gateUrl: 'https://www.google.com/'
+    gateUrl: 'https://isd-dev.argo-dev.opsmx.net/'
     lifetimeMinutes: 4
     intervalTime: 3
     lookBackType: sliding
     gitops: true
     passScore: 90
     serviceList: 
-    - logTemplateName: logymla
+    - logTemplateName: logyml
       logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
