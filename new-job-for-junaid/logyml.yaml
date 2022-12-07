@@ -5,6 +5,7 @@ metadata:
 data:
   logyml: |
     monitoringProvider: ELASTICSEARCH
+    disableDefaultErrorTopics: True
     accountName: logEalastic1
     scoringAlgorithm: Canary
     index: kubernetes*
