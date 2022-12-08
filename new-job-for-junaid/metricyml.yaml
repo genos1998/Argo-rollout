@@ -11,7 +11,6 @@ data:
       groups:
         - metrics:
             - metricType: ADVANCED
-              metricWeight: 100
               nanStrategy: ReplaceWithZero
               riskDirection: Higher
               customThresholdHigher: 60
@@ -22,7 +21,6 @@ data:
           group: Number Of Bytes Sent To Client
         - metrics:
             - metricType: ADVANCED
-              metricWeight: 1
               nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 50
@@ -33,7 +31,6 @@ data:
           group: Upstream Service Latency Per Ingress - 50th Percentile
         - metrics:
             - metricType: ADVANCED
-              metricWeight: 1
               nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 30
