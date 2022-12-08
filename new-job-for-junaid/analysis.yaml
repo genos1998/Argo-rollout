@@ -10,7 +10,7 @@ data:
     lifetimeMinutes: 4
     intervalTime: 3
     lookBackType: sliding
-    gitops: TRUE
+    gitops: False
     passScore: 90
     serviceList: 
     - metricScopeVariables: "${namespace_key},${pod_key},${container_key},${app_key}"
