@@ -15,6 +15,6 @@ data:
     serviceList: 
     - metricScopeVariables: "${namespace_key},${pod_key}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
-      canaryMetricScope: "argocd,{{args.canary-hash}}"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
       metricTemplateName: "metricyml"
 
