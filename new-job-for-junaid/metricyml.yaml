@@ -4,18 +4,32 @@ metadata:
   name: metricyml
 data:
   metricyml: |
+    accountName: isd312-saas-prom
     metricTemplateSetup:
       percent_diff_threshold: hard
       isNormalize: false
       groups:
         - metrics:
             - metricType: ADVANCED
+              metricWeight: 100
+              nanStrategy: ReplaceWithZero
+              riskDirection: Higher
               customThresholdHigher: 60
               name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
+              criticality: Normal
               customThresholdLower: 10
+              watchlist: false
           group: Number Of Bytes Sent To Client
         - metrics:
             - metricType: ADVANCED
+              metricWeight: 1
+              nanStrategy: ReplaceWithZero
+              riskDirection: Lower
+              customThresholdHigher: 50
+              name: "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))"
+              criticality: Normal
+              customThresholdLower: 90
+              watchlist: false
           group: Upstream Service Latency Per Ingress - 50th Percentile
         - metrics:
             - metricType: ADVANCED
@@ -28,4 +42,4 @@ data:
               customThresholdLower: 90
               watchlist: false
           group: Upstream Service Latency Per Ingress - 90th Percentile
-    advancedProvider: PROMETHEUSYU
+    advancedProvider: PROMETHEUS
