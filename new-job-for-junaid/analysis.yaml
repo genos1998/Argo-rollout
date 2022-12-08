@@ -10,10 +10,11 @@ data:
     lifetimeMinutes: 4
     intervalTime: 3
     lookBackType: sliding
-    gitops: TRUE
+    gitops: FALSE
     passScore: 90
     serviceList: 
-    - metricScopeVariables: "${namespace_key},${pod_key}"
-      baselineMetricScope: "argocd,boom"
-      canaryMetricScope: "argocd,bham"
-      metricTemplateName: "metricyml"
+    - logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      logTemplateName: "loggytemp"
+
