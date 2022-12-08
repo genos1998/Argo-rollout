@@ -14,7 +14,7 @@ data:
     passScore: 90
     serviceList: 
     - metricScopeVariables: "${namespace_key},${pod_key}"
-      baselineMetricScope: "argocd,{{args.baseline-hash}}"
+      baselineMetricScope: "argocd,{{env.baseline-hash}}"
       canaryMetricScope: "argocd,{{args.canary-hash}}"
       metricTemplateName: "metricMissionFailMid"
 
