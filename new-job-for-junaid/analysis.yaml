@@ -13,8 +13,8 @@ data:
     gitops: TRUE
     passScore: 90
     serviceList: 
-    - metricScopeVariables: "${namespace_key},${pod_key}"
-      baselineMetricScope: "argocd,boom"
-      canaryMetricScope: "argocd,bham"
-      metricTemplateName: "metricyml"
+    - metricScopeVariables: "${namespace_key},${pod_key},${container_key},${app_key}"
+      baselineMetricScope: "argocd,boom,blue,orange"
+      canaryMetricScope: "argocd,bham,black,yorange"
+      metricTemplateName: "prometheus-jvm-health-validator"
 
