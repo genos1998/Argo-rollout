@@ -4,7 +4,7 @@ metadata:
   name: opsmx-provider-config
 data:
   providerConfig: |
-    application: final-jobla
+    application: final-job
     user: admin
     gateUrl: 'https://isd-dev.argo-dev.opsmx.net/'
     lifetimeMinutes: 4
