@@ -11,7 +11,6 @@ data:
       groups:
         - metrics:
             - metricType: ADVANCED
-              nanStrategy: ReplaceWithZero
               riskDirection: Higher
               customThresholdHigher: 60
               name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
@@ -21,7 +20,6 @@ data:
           group: Number Of Bytes Sent To Client
         - metrics:
             - metricType: ADVANCED
-              nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 50
               name: "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))"
@@ -31,7 +29,6 @@ data:
           group: Upstream Service Latency Per Ingress - 50th Percentile
         - metrics:
             - metricType: ADVANCED
-              nanStrategy: ReplaceWithZero
               riskDirection: Lower
               customThresholdHigher: 30
               name: "sum(rate(http_server_requests_seconds_sum{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m])) / sum(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m]))"
