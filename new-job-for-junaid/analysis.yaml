@@ -16,5 +16,5 @@ data:
     - metricScopeVariables: "${namespace_key},${pod_key},${container_key},${app_key}"
       baselineMetricScope: "argocd,boom,blue,orange"
       canaryMetricScope: "argocd,bham,black,yorange"
-      metricTemplateName: "prometheus-jvm-health-validator"
+      metricTemplateName: "prometheus-jvm-health-validator-s"
 
