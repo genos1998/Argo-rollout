@@ -60,5 +60,5 @@ spec:
                         name: metricyml
                 - name: secret-config-volume
                   secret:
-                    secretName: opsmx-profile-v5
+                    secretName: opsmx-profile-isd-demo
                     optional: false
