@@ -5,15 +5,7 @@ metadata:
 data:
   logyml: |
     monitoringProvider: ELASTICSEARCH
-    disableDefaultErrorTopics: TRUE
     accountName: logEalastic1
     scoringAlgorithm: Canary
     index: kubernetes*
     responseKeywords: log
-    tags:
-    - errorString: NOnOutOfMemoryError
-      tag: NotJunaid
-    errorTopics:
-    - errorString: OnOutOfMemoryError
-      topic: CRITICAL
-      type: NotSodefault
