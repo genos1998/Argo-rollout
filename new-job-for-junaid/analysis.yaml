@@ -17,4 +17,10 @@ data:
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateName: "logtemplate2"
+      serviceName: "Junaid"
+    - logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      logTemplateName: "logtemplate2"
+      serviceName: "Junaid"
 
