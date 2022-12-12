@@ -1,0 +1,27 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  name: podrequiredlabels
+spec:
+  crd:
+    spec:
+      names:
+        kind: PodRequiredLabels
+      validation:
+        # Schema for the `parameters` field
+        openAPIV3Schema:
+          properties:
+            labels:
+              type: array
+              items: string
+  targets:
+    - target: admission.k8s.gatekeeper.sh
+      rego: |
+        package podrequiredlabels
+
+        violation[{"msg": msg, "details": {"required_labels": required}}] {
+          required := {label | label := input.parameters.labels[_]}
+          provided := input.review.object.metadata.labels["app"]
+          not required[provided]
+          msg := sprintf("Missing required labels %v",[required])
+        }
