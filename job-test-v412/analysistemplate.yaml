@@ -47,7 +47,7 @@ spec:
                   projected:
                     sources:
                     - configMap:
-                        name: elastic-verifier
+                        name: elastica-verifier
                     - configMap:
                         name: prometheus-verifier
                 - name: secret-config-volume
