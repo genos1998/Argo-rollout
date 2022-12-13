@@ -6,7 +6,7 @@ data:
   metricyml: |
     accountName: isd312-saas-prom
     metricTemplateSetup:
-      percent_diff_threshold: hard
+      percentDiffThreshold: hard
       groups:
         - metrics:
             - metricType: ADVANCED
