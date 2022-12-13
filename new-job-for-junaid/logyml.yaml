@@ -6,6 +6,5 @@ data:
   logymla: |
     monitoringProvider: ELASTICSEARCH
     accountName: logEalastic1
-    scoringAlgorithm: Canary
     index: kubernetes*
     responseKeywords: log
