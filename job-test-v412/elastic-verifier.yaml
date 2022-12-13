@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elastic-verifier
+data:
+  logymla: |
+    monitoringProvider: ELASTICSEARCH
+    accountName: logEalastic1
+    index: kubernetes*
+    responseKeywords: log
