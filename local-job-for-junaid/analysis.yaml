@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: opsmx-provider-config
+data:
+  providerConfig: |
+    application: final-job
+    user: admin
+    opsmxIsdUrl: 'https://isd-dev.argo-dev.opsmx.net/'
+    lifetimeMinutes: 4
+    intervalTime: 3
+    lookBackType: sliding
+    gitops: TRUE
+    passScore: 90
+    serviceList: 
+    - logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      logTemplateName: "logymla"
