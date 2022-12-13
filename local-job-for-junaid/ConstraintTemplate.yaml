@@ -1,0 +1,24 @@
+apiVersion: templates.gatekeeper.sh/v1beta1
+kind: ConstraintTemplate
+metadata:
+  creationTimestamp: null
+  name: defaultnamespace
+spec:
+  crd:
+    spec:
+      names:
+        kind: DefaultNamespace
+  targets:
+  - libs:
+    - |-
+     ...
+     rego: |-
+      package default_namespace
+      import data.lib.core
+      violation[msg] {
+          # If namespace matches "default", raise a violation
+          core.namespace == "default"
+          msg := core.format("Resource should not be deployed to default namespace")
+      }
+    target: admission.k8s.gatekeeper.sh
+status: {}
