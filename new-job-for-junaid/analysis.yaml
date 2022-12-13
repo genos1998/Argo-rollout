@@ -10,7 +10,7 @@ data:
     lifetimeMinutes: 4
     intervalTime: 3
     lookBackType: sliding
-    gitops: FALSE
+    gitops: TRUE
     passScore: 90
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
