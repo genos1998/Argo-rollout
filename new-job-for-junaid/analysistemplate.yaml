@@ -55,7 +55,7 @@ spec:
                     - configMap:
                         name: newnew
                     - configMap:
-                        name: logyml
+                        name: logymla
                     - configMap:
                         name: metricyml
                 - name: secret-config-volume
