@@ -47,13 +47,7 @@ spec:
                   projected:
                     sources:
                     - configMap:
-                        name: prometheus-verifier
-                    - configMap:
                         name: elastic-verifier
-                    - configMap:
-                        name: stackdriver-verifier
-                    - configMap:
-                        name: newrelic-verifier
                 - name: secret-config-volume
                   secret:
                     secretName: isd-dev-cd-profile
