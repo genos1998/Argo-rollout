@@ -15,7 +15,3 @@ data:
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateName: "elastic-verifier"
-    - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},jobv412"
-      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},jobv412"
-      metricTemplateName: "metricyml" 
