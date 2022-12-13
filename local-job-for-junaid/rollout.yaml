@@ -19,15 +19,10 @@ spec:
     spec:
       containers:
         - name: rollouts-baseline
-          image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1401
+          image: genos1998/argojob:v33
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
-          env:
-            - name: NEWRELIC_LICENSE
-              value: 68b87ee3618f714a039cead822d6d250b54dNRAL
-            - name: SERVICE_NAME
-              value: issuegen-exp-ss1-app1
           resources:
             requests:
               memory: 32Mi
