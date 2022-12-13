@@ -14,7 +14,7 @@ data:
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
-      logTemplateName: "elastic-verifier"
+      logTemplateName: "elastica-verifier"
     - metricScopeVariables: "${namespace_key},${pod_key}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
