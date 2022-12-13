@@ -10,8 +10,8 @@ data:
     lookBackType: sliding
     gitops: TRUE
     passScore: 90
-    baselineStartTime: 
-    canaryStartTime: 
+    baselineStartTime: 2022-12-13T08:28:00Z
+    canaryStartTime: 2022-12-13T08:28:00Z
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*9b5c99749.*"
