@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: metricyml
+  name: prometheus-verifier
 data:
-  metricyml: |
+  prometheus-verifier: |
     accountName: isd312-saas-prom
     advancedProvider: PROMETHEUS
     metricTemplateSetup:
@@ -11,11 +11,7 @@ data:
       groups:
         - metrics:
             - metricType: ADVANCED
-              name: "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))"
-          group: Upstream Service Latency Per Ingress - 50th Percentile
-        - metrics:
-            - metricType: ADVANCED
-              "name": "avg(rate(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]))"
+              name: "avg(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
           group: "Memory Usage By Pod Name"
         - metrics:
             - metricType: ADVANCED
