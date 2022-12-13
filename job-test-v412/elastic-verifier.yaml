@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: elastic-verifier
 data:
-  logymla: |
+  elastic-verifier: |
     monitoringProvider: ELASTICSEARCH
     accountName: logEalastic1
     index: kubernetes*
