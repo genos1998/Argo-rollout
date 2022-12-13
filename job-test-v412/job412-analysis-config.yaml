@@ -13,9 +13,9 @@ data:
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateName: "elastic-verifier"
     - metricScopeVariables: "${namespace_key},${pod_key}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
-      canaryMetricScope: "argocd,{{env.MY_POD_NAME}}"
-      metricTemplateName: "metricyml" 
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+      metricTemplateName: "prometheus-verifier" 
