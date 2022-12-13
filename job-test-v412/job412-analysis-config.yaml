@@ -10,10 +10,12 @@ data:
     lookBackType: sliding
     gitops: TRUE
     passScore: 90
-    baselineStartTime: 2022-12-13T08:28:00Z
-    canaryStartTime: 2022-12-13T08:28:00Z
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
-      baselineLogScope: ".*9b5c99749.*"
-      canaryLogScope: ".*6fd4f58868.*"
-      logTemplateName: "elastica-verifier"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      logTemplateName: "elastic-verifier"
+    - metricScopeVariables: "${namespace_key},${pod_key}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+      metricTemplateName: "prometheus-verifier" 
