@@ -19,7 +19,7 @@ spec:
                 - name: opsmx11-secret
                 containers:
                 - name: junaid-job-analysis
-                  image: 'opsmx11/argo-isd-metric-provider-job:v1.0.12' 
+                  image: 'genos1998/argojob:v36' 
                   imagePullPolicy: Always
                   env:
                     - name: MY_POD_NAME
@@ -33,8 +33,6 @@ spec:
                   volumeMounts:
                     - name: provider-config-volume
                       mountPath: /etc/config/provider
-                    - name: gitopstemplates
-                      mountPath: /etc/config/templates
                     - name: secret-config-volume
                       mountPath: /etc/config/secrets
                       readOnly: true
@@ -43,21 +41,6 @@ spec:
                 - name: provider-config-volume
                   configMap:
                     name: opsmx-provider-config
-                - name: gitopstemplates
-                  projected:
-                    sources:
-                    - configMap:
-                        name: metrixtemplates
-                    - configMap:
-                        name: loggytemplate
-                    - configMap:
-                        name: stacky-map-v3
-                    - configMap:
-                        name: newnew
-                    - configMap:
-                        name: logymla
-                    - configMap:
-                        name: metricyml
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-profile-isd-demo
