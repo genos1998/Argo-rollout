@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: rollouts-baseline
-          image: shaikhjunaid1998/argo-rollouts:v6
+          image: argoproj/rollouts-demo:green
           imagePullPolicy: Always
           ports:
             - containerPort: 8088
