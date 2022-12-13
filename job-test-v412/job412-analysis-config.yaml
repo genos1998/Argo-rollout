@@ -10,12 +10,10 @@ data:
     lookBackType: sliding
     gitops: TRUE
     passScore: 90
+    baselineStartTime: 
+    canaryStartTime: 
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
-      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
+      baselineLogScope: ".*9b5c99749.*"
+      canaryLogScope: ".*6fd4f58868.*"
       logTemplateName: "elastic-verifier"
-    - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},jobv412"
-      canaryMetricScope: "argocd,{{env.MY_POD_NAME}},jobv412"
-      metricTemplateName: "metricyml" 
