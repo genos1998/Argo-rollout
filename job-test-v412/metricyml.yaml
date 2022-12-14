@@ -6,14 +6,13 @@ data:
   prom: |
     accountName: isd312-saas-prom
     advancedProvider: PROMETHEUS
+    metricType: ADVANCED
     metricTemplateSetup:
       percentDiffThreshold: hard
       groups:
         - metrics:
-            - metricType: ADVANCED
-              name: "avg(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
+            - name: "avg(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
           group: "Memory Usage By Pod Name"
         - metrics:
-            - metricType: ADVANCED
-              name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
+            - name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
           group: CPU Usage By Pod Name
