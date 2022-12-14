@@ -5,9 +5,7 @@ metadata:
 data:
   providerConfig: |
     application: job412
-    lifetimeMinutes: 4
-    intervalTime: 3
-    lookBackType: sliding
+    lifetimeMinutes: 3
     gitops: TRUE
     passScore: 90
     baselineStartTime: 2022-12-13T08:28:00Z
