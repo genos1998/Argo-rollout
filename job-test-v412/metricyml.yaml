@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prometheusys-verifier
+  name: prometheusyss-verifier
 data:
-  prometheusys-verifier: |
+  prometheusyss-verifier: |
     accountName: isd312-saas-prom
     advancedProvider: PROMETHEUS
     metricTemplateSetup:
