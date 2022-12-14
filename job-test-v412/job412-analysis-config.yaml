@@ -16,4 +16,4 @@ data:
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*9b5c99749.*"
       canaryLogScope: ".*6fd4f58868.*"
-      logTemplateName: "elastica-verifier"
+      logTemplateName: "elasticas-verifier"
