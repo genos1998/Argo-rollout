@@ -9,6 +9,6 @@ data:
     index: kubernetes*
     responseKeywords: log
     errorTopics:
-    - errorString: OnOutOfMemoryError
+    - errorString: NOnOutOfMemoryError
       topic: WARN
       type: default
