@@ -16,4 +16,5 @@ data:
           group: "Memory Usage By Pod Name"
         - metrics:
             - name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
+              riskDirection: higher
           group: CPU Usage By Pod Name
