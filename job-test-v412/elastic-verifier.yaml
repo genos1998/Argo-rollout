@@ -11,3 +11,4 @@ data:
     errorTopics:
     - errorString: OnOutOfMemoryError
       topic: IGNORE
+      type: default
