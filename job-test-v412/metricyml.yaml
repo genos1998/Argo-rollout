@@ -8,7 +8,6 @@ data:
     advancedProvider: PROMETHEUS
     metricType: ADVANCED
     metricTemplateSetup:
-      percentDiffThreshold: hard
       groups:
         - metrics:
             - name: "avg(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
