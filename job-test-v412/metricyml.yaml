@@ -5,6 +5,7 @@ metadata:
 data:
   prom: |
     accountName: isd312-saas-prom
+    advancedProvider: PROMETHEUS
     metricType: ADVANCED
     metricTemplateSetup:
       percentDiffThreshold: hard
