@@ -8,4 +8,5 @@ data:
     accountName: logEalastic1
     index: kubernetes*
     responseKeywords: log
-    tagEnabled: true
+    tags:
+    - errorString: Panda
