@@ -8,3 +8,6 @@ data:
     accountName: logEalastic1
     index: kubernetes*
     responseKeywords: log
+    tags:
+    - errorString: Junaid
+      tag: WARNY
