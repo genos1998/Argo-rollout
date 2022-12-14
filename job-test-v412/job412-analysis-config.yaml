@@ -14,6 +14,6 @@ data:
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateName: "elasticas-verifier"
     - metricScopeVariables: "${namespace_key},${pod_key}"
-      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
-      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+      baselineMetricScope: "argocd,ab"
+      canaryMetricScope: "argocd,cd"
       metricTemplateName: "prom" 
