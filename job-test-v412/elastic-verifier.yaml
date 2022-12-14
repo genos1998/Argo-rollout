@@ -10,5 +10,5 @@ data:
     responseKeywords: log
     errorTopics:
     - errorString: OnOutOfMemoryError
-      topic: IGNORE
+      topic: WARN
       type: default
