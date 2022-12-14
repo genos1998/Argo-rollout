@@ -6,14 +6,14 @@ data:
   providerConfig: |
     application: job412
     lifetimeMinutes: 3
-    gitops: False
+    gitops: TRUE
     passScore: 90
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
-      logTemplateName: logTemp1
+      logTemplateName: "elasticas-verifier"
     - metricScopeVariables: "${namespace_key},${pod_key}"
-      baselineMetricScope: "argocd,ab"
-      canaryMetricScope: "argocd,cd"
-      metricTemplateName: "test-prometheus" 
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+      metricTemplateName: "prom" 
