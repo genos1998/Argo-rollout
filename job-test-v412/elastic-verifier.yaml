@@ -10,4 +10,4 @@ data:
     responseKeywords: log
     errorTopics:
     - errorString: OnOutOfMemoryError
-      topic: INFO
+      topic: IGNORE
