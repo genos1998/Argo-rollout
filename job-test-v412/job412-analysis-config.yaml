@@ -8,7 +8,6 @@ data:
     lifetimeMinutes: 3
     gitops: TRUE
     passScore: 90
-    opsmxIsdUrl: https://www.google.com/
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
