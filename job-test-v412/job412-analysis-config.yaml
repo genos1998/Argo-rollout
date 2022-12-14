@@ -17,3 +17,12 @@ data:
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
       metricTemplateName: "prom" 
+    - metricScopeVariables: "${namespace_key},${pod_key}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
+      metricTemplateName: "prom" 
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      logTemplateName: "elasticas-verifier"
+      
