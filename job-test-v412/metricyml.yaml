@@ -4,7 +4,7 @@ metadata:
   name: prometheusyss-verifier
 data:
   prometheusyss-verifier: |
-    accountName: isd312-saas-prom
+    accountName: isd312-saas-promy
     advancedProvider: PROMETHEUS
     metricTemplateSetup:
       percentDiffThreshold: hard
