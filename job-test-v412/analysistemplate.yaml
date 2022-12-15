@@ -8,6 +8,7 @@ spec:
     - name: baseline-hash
   metrics:
     - name: job412-analysis-score
+      initialDelay: 60s
       provider:
         job:
           spec:
