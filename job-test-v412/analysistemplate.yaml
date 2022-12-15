@@ -51,7 +51,7 @@ spec:
                     - configMap:
                         name: promy
                     - configMap:
-                        name: promy-global
+                        name: promxy-global
                     - configMap:
                         name: prometheus-app-health-generic-min
                 - name: secret-config-volume
