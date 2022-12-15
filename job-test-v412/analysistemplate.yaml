@@ -51,7 +51,7 @@ spec:
                     - configMap:
                         name: promy
                     - configMap:
-                        name: promy-gloabl
+                        name: promy-global
                 - name: secret-config-volume
                   secret:
                     secretName: isd-demo-cd-profile
