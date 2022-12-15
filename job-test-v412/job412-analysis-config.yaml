@@ -22,6 +22,6 @@ data:
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
     - metricTemplateName: "prometheus-app-health-generic-min"
-      metricScopeVariables: "${namespace_key},${pod_key},${app_name}""
+      metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},job412"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},job412"
