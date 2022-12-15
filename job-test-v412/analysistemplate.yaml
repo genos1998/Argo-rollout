@@ -52,5 +52,5 @@ spec:
                         name: promy
                 - name: secret-config-volume
                   secret:
-                    secretName: isd-dev-cd-profile
+                    secretName: isd-demo-cd-profile
                     optional: false
