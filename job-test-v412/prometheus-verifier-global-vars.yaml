@@ -8,7 +8,7 @@ data:
     metricType: ADVANCED
     advancedProvider: PROMETHEUS
     metricWeight: 2
-    criticality: Critical
+    criticality: critical
     nanStrategy: remove
     metricTemplateSetup:
       isNormalize: true
@@ -16,9 +16,10 @@ data:
         - metrics:
             - name: "avg(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"})"
               riskDirection: higherOrLower
-              criticality: MustHave
+              criticality: mustHave
               customThresholdHigherPercentage: 80
               customThresholdLowerPercentage: 20
+              nanStrategy: replaceWithZero
               watchlist: true
           group: Memory Usage By Pod Name
         - metrics:
