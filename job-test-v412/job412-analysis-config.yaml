@@ -16,4 +16,4 @@ data:
       metricTemplateName: "promy"
       metricScopeVariables: "${namespace_key},${pod_key}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
-      canaryMetricScope: "argcd,{{env.LATEST_POD_HASH}}"
+      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
