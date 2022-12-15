@@ -18,13 +18,13 @@ data:
               riskDirection: higherOrLower
               criticality: MustHave
               customThresholdHigherPercentage: 80
-              customerThresholdLowerPercentage: 20
+              customThresholdLowerPercentage: 20
               watchlist: true
           group: Memory Usage By Pod Name
         - metrics:
             - name: "avg(rate(container_cpu_usage_seconds_total{namespace=\"${namespace_key}\", pod=~\".*${pod_key}.*\"}[1m]) * 100)"
               riskDirection: higher
               customThresholdHigherPercentage: 70
-              customerThresholdLowerPercentage: 30
+              customThresholdLowerPercentage: 30
               watchlist: true
           group: CPU Usage By Pod Name
