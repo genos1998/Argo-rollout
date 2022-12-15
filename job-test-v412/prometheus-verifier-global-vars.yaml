@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: promy-global
+  name: promxy-global
 data:
-  promy-global: |
+  promxy-global: |
     accountName: isd312-saas-prom
     metricType: ADVANCED
     advancedProvider: PROMETHEUS
