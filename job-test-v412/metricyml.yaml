@@ -6,6 +6,7 @@ data:
   promy: |
     accountName: isd312-saas-prom
     metricType: ADVANCED
+    advancedProvider: PROMETHEUS
     metricTemplateSetup:
       groups:
         - metrics:
