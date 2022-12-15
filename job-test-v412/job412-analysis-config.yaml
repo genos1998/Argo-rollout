@@ -13,3 +13,7 @@ data:
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateName: "elasticasy-verifier"
+      metricTemplateName: "promy"
+      metricScopeVariables: "${namespace_key},${pod_key}"
+      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
+      canaryMetricScope: "argcd,{{env.LATEST_POD_HASH}}"
