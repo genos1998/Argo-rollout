@@ -33,7 +33,7 @@ data:
               watchlist: true
           group: "Application Latency"
         - metrics:
-            - name: "avg(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[5m]))"
+            - name: "avg(rate(http_server_requests_seconds_count{app=\"${app_name}\",kubernetes_pod_name=~\"${pod_key}\"}[1m]))"
               riskDirection: higherOrLower
               customThresholdHigherPercentage: 50
               customThresholdLowerPercentage: 50
