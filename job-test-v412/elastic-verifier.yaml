@@ -12,3 +12,5 @@ data:
     errorTopics: 
     - errorString: ArrayIndexOutOfBounds
       topic: ERROR
+    - errorString: NullPointerException
+      topic: ERROR
