@@ -12,6 +12,8 @@ data:
     errorTopics: 
     - errorString: OnOutOfMemoryError
       topic: WARN
+    - errorString: NOnOutOfMemoryError
+      topic: criticalError
     tags:
     - errorString: NOnOutOfMemoryError
       tag: NotJunaid
