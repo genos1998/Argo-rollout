@@ -9,11 +9,3 @@ data:
     index: kubernetes*
     filterKey: kubernetes.pod_name
     responseKeywords: log
-    errorTopics: 
-    - errorString: OnOutOfMemoryError
-      topic: WARN
-    - errorString: NOnOutOfMemoryError
-      topic: critical
-    tags:
-    - errorString: NOnOutOfMemoryError
-      tag: NotJunaid
