@@ -9,3 +9,6 @@ data:
     index: kubernetes*
     filterKey: kubernetes.pod_name
     responseKeywords: log
+    errorTopics: 
+    - errorString: ArrayIndexOutOfBounds
+      topic: ERROR
