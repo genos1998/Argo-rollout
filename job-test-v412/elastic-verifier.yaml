@@ -13,6 +13,7 @@ data:
     errorTopics: 
     - errorString: OnOutOfMemoryError
       topic: WARN
+      type: custom
     tags:
     - errorString: NOnOutOfMemoryError
       tag: NotJunaid
