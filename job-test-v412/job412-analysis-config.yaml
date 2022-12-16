@@ -5,7 +5,7 @@ metadata:
 data:
   providerConfig: |
     application: job412
-    lifetimeMinutes: 10
+    lifetimeMinutes: 3
     gitops: TRUE
     passScore: 90
     serviceList: 
