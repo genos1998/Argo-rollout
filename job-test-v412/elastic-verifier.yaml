@@ -9,3 +9,10 @@ data:
     index: kubernetes*
     filterKey: kubernetes.pod_name
     responseKeywords: log
+    tagEnabled: True
+    errorTopics: 
+    - errorString: OnOutOfMemoryError
+      topic: WARN
+    tags:
+    - errorString: NOnOutOfMemoryError
+      tag: NotJunaid
