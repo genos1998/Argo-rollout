@@ -48,7 +48,7 @@ spec:
                   projected:
                     sources:
                     - configMap:
-                        name: stackdriver-generic-minimal
+                        name: newrelic-app-health-generic-min
                 - name: secret-config-volume
                   secret:
                     secretName: isd-demo-cd-profile
