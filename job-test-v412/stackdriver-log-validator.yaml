@@ -8,3 +8,11 @@ data:
     accountName: oes-cluster-sd
     filterKey: resource.labels.pod_name
     responseKeywords: textPayload
+    errorTopics: 
+    - errorString: ArrayIndexOutOfBounds
+      topic: ERROR
+    - errorString: NullPointerException
+      topic: ERROR
+    tags:
+    - errorString: FATAL
+      tag: FatalErrors
