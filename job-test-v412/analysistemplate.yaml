@@ -48,13 +48,7 @@ spec:
                   projected:
                     sources:
                     - configMap:
-                        name: elasticasy-verifier
-                    - configMap:
-                        name: promy
-                    - configMap:
-                        name: promxy-global
-                    - configMap:
-                        name: prometheus-app-health-generic-min
+                        name: stackdriver-generic-minimal
                 - name: secret-config-volume
                   secret:
                     secretName: isd-demo-cd-profile
