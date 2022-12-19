@@ -5,6 +5,8 @@ metadata:
 data:
   providerConfig: |
     application: job412
+    baselineStartTime: "2022-12-19T09:22:00Z"
+    canaryStartTime: "2022-12-19T09:22:00Z"
     lifetimeMinutes: 3
     gitops: TRUE
     passScore: 90
