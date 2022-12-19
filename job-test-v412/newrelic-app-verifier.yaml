@@ -12,8 +12,6 @@ data:
         - metrics:
             - name: "SELECT average(duration)*1000 FROM Transaction WHERE appName = '${app_key}' AND host RLIKE '${host_key}'"
               riskDirection: higher
-            - name: "avg(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\"${pod_key}\"})"
-              riskDirection: lower
           group: "Transaction Time"
         - metrics:
             - name: "SELECT percentile(duration, 95) * 1000 FROM Transaction WHERE appName='${app_key}' AND host RLIKE '${host_key}'"
@@ -40,6 +38,6 @@ data:
               riskDirection: higher
           group: "CPU Utilization"
         - metrics:
-            - name: "SELECT (average(apm.service.memory.physical) * rate(count(apm.service.instance.count), 1 minute)) / 1000 as memoryUsage FROM Metric WHERE (appName = '${app_key}' AND host RLIKE '.*${pod_key}.*')"
+            - name: "SELECT (average(apm.service.memory.physical) * rate(count(apm.service.instance.count), 1 minute)) / 1000 as memoryUsage FROM Metric WHERE (appName = '${app_key}' AND host RLIKE '.*${host_key}.*')"
               riskDirection: higher
           group: "Memory Consumption"
