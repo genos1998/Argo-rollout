@@ -12,4 +12,4 @@ data:
     - metricScopeVariables: "${app_key},${host_key}"
       baselineMetricScope: "job412,.*{{env.STABLE_POD_HASH}}.*"
       canaryMetricScope: "job412,.*{{env.LATEST_POD_HASH}}.*"
-      metricTemplateName: "newrelic-app-health-generic-min"
+      metricTemplateName: "newrelic-app-health-generic-ext"
