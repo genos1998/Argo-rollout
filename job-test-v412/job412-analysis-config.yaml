@@ -11,19 +11,7 @@ data:
     gitops: TRUE
     passScore: 90
     serviceList: 
-    - logScopeVariables: "kubernetes.pod_name"
+    - logScopeVariables: "resource.labels.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
-      logTemplateName: "elasticasy-verifier"
-      metricTemplateName: "promy"
-      metricScopeVariables: "${namespace_key},${pod_key}"
-      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}}"
-      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}}"
-    - metricTemplateName: "promxy-global"
-      metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "argocd,.*{{env.STABLE_POD_HASH}}.*,job412"
-      canaryMetricScope: "argocd,.*{{env.LATEST_POD_HASH}}.*,job412"
-    - metricTemplateName: "prometheus-app-health-generic-min"
-      metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "argocd,.*{{env.STABLE_POD_HASH}}.*,job412"
-      canaryMetricScope: "argocd,.*{{env.LATEST_POD_HASH}}.*,job412"
+      logTemplateName: "stackdriver-generic-minimal"
