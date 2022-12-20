@@ -17,3 +17,5 @@ data:
     tags:
     - errorString: FATAL
       tag: FatalErrors
+    - errorString: ArrayIndexOutOfBounds
+      tag: ArrayIssues
