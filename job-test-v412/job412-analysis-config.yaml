@@ -9,7 +9,7 @@ data:
     gitops: TRUE
     passScore: 90
     serviceList: 
-    - metricScopeVariables: "${app_key},${host_key}"
-      baselineMetricScope: "job412,.*{{env.STABLE_POD_HASH}}.*"
-      canaryMetricScope: "job412,.*{{env.LATEST_POD_HASH}}.*"
-      metricTemplateName: "newrelic-app-health-generic-ext"
+    - metricScopeVariables: "kubernetes.pod_name"
+      baselineMetricScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryMetricScope: ".*{{env.LATEST_POD_HASH}}.*"
+      metricTemplateName: "elasticasy-verifier"
