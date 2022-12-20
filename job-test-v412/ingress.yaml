@@ -8,7 +8,7 @@ metadata:
     ingress.kubernetes.io/app-root: /
 spec:
   rules:
-  - host: issuegen-sdnr-v412.app-canary.opsmx.net
+  - host: job412-issuegen.autopilot.opsmx.com
     http:
       paths:
       - path: /
