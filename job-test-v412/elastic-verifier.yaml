@@ -9,13 +9,4 @@ data:
     index: kubernetes*
     filterKey: kubernetes.pod_name
     responseKeywords: log
-    errorTopics: 
-    - errorString: ArrayIndexOutOfBounds
-      topic: ERROR
-    - errorString: NullPointerException
-      topic: ERROR
-    tags:
-    - errorString: FATAL
-      tag: FatalErrors
-    - errorString: ArrayIndexOutOfBounds
-      tag: ArrayIssues
+    disableDefaultErrorTopics: true
