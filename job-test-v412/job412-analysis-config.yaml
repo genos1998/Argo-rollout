@@ -9,7 +9,7 @@ data:
     gitops: TRUE
     passScore: 90
     serviceList: 
-    - metricScopeVariables: "kubernetes.pod_name"
-      baselineMetricScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryMetricScope: ".*{{env.LATEST_POD_HASH}}.*"
-      metricTemplateName: "elasticasy-verifier"
+    - logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      logTemplateName: "elasticasy-verifier"
