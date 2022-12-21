@@ -13,10 +13,6 @@ data:
     gitops: TRUE
     passScore: 90
     serviceList: 
-    - logScopeVariables: "kubernetes.pod_name"
-      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
-      logTemplateName: "logymla"
     - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
       baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
       canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
