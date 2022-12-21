@@ -4,6 +4,7 @@ metadata:
   name: job412-analysis-config
 data:
   providerConfig: |
+    gateUrl: https://isd-demo.argo-dev.opsmx.net/
     application: job412
     lifetimeMinutes: 3
     gitops: TRUE
