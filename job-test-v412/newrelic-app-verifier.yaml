@@ -19,6 +19,11 @@ data:
               customThresholdHigherPercentage: 30
               nanStrategy: replaceWithZero
               watchlist: true
+            - name: "SELECT average(duration)*1000 FROM Transaction WHERE appName = '${app_key}' AND host RLIKE '${host_key}'"
+              riskDirection: lower
+              criticality: normal
+              customThresholdHigherPercentage: 60
+              nanStrategy: replaceWithZero
           group: "Transaction Time"
         - metrics:
             - name: "SELECT percentile(duration, 95) * 1000 FROM Transaction WHERE appName='${app_key}' AND host RLIKE '${host_key}'"
