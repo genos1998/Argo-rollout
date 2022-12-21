@@ -10,6 +10,3 @@ data:
     filterKey: kubernetes.pod_name
     responseKeywords: log
     disableDefaultErrorTopics: true
-    errorTopics: 
-    - errorString: ArrayIndexOutOfBounds
-      topic: error
