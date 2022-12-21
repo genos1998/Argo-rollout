@@ -4,7 +4,6 @@ metadata:
   name: logymla
 data:
   logymla: |
-    monitoringProvider: ELASTICSEARCHY
     accountName: logEalastic1
     index: kubernetes*
     responseKeywords: log
