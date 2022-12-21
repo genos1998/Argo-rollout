@@ -4,7 +4,7 @@ metadata:
   name: elasticasy-verifier
 data:
   elasticasy-verifier: |
-    monitoringProvider: ELASTICSEARCH
+    monitoringProvider: elasticsearch
     accountName: logEalastic1
     index: kubernetes*
     filterKey: kubernetes.pod_name
