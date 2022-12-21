@@ -48,8 +48,6 @@ spec:
                     sources:
                     - configMap:
                         name: elasticasy-verifier
-                    - configMap:
-                        name: prometheus-app-health-generic-min
                 - name: secret-config-volume
                   secret:
                     secretName: isd-demo-cd-profile
