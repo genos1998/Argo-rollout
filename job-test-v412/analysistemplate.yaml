@@ -6,6 +6,11 @@ spec:
   args:
     - name: canary-hash
     - name: baseline-hash
+    - name: test-secret-sub
+      valueFrom:
+        secretKeyRef:
+          name: isd-demo-cd-profile
+          key: opsmxIsdUrl
   metrics:
     - name: job412-analysis-score
       provider:
@@ -30,6 +35,8 @@ spec:
                       value: "{{args.baseline-hash}}"
                     - name: LATEST_POD_HASH
                       value: "{{args.canary-hash}}"
+                    - name: SECRET_SUB
+                      value: "{{args.test-secret-sub}}"
                   volumeMounts:
                     - name: provider-config-volume
                       mountPath: /etc/config/provider
