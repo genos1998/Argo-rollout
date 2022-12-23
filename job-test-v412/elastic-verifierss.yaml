@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: elasticasy-verifiers
+  name: elasticasy-verifierss
 data:
-  elasticasy-verifiers: |
+  elasticasy-verifierss: |
     monitoringProvider: ELASTICSEARCH
     accountName: logEalastic1
     index: kubernetes*
