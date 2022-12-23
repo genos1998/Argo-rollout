@@ -9,4 +9,3 @@ data:
     index: kubernetes*
     filterKey: kubernetes.pod_name
     responseKeywords: logtext
-    disableDefaultErrorTopics: true
