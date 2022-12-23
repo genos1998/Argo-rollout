@@ -54,7 +54,7 @@ spec:
                   projected:
                     sources:
                     - configMap:
-                        name: elasticasy-verifier
+                        name: elasticasy-verifiers
                 - name: secret-config-volume
                   secret:
                     secretName: isd-demo-cd-profile
