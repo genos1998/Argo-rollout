@@ -9,5 +9,4 @@ data:
     index: kubernetes*
     filterKey: kubernetes.pod_name
     responseKeywords: logtext
-    streamId: "10101"
     disableDefaultErrorTopics: true
