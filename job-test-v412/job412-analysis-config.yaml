@@ -11,6 +11,6 @@ data:
     passScore: 90
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
-      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
+      baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
+      canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
       logTemplateName: "elasticasy-verifierss"
