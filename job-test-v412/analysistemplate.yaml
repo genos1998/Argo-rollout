@@ -57,5 +57,5 @@ spec:
                         name: elasticasy-verifierss
                 - name: secret-config-volume
                   secret:
-                    secretName: isd-demo-cd-profile
+                    secretName: isd-dev-cd-profile
                     optional: false
