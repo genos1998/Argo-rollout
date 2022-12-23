@@ -8,4 +8,4 @@ data:
     accountName: logEalastic1
     index: kubernetes*
     filterKey: kubernetes.pod_name
-    responseKeywords: logtext
+    responseKeywords: log
