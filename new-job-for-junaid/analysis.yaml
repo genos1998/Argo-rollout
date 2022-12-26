@@ -12,5 +12,5 @@ data:
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
-      canaryLogScope: ".*{{env.Latest_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
       logTemplateName: "logtesting"
