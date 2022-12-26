@@ -10,7 +10,7 @@ data:
     lifetimeMinutes: 3
     passScore: 90
     serviceList: 
-    - - logScopeVariables: "kubernetes.pod_name"
+    - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.Latest_POD_HASH}}.*"
       logTemplateName: "logtesting"
