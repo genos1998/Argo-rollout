@@ -4,7 +4,7 @@ metadata:
   name: opsmx-provider-config
 data:
   providerConfig: |
-    application: final-job
+    application: justhere
     user: admin
     opsmxIsdUrl: 'https://isd-argocd.isd-dev.opsmx.net/'
     lifetimeMinutes: 3
