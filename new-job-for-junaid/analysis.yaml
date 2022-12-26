@@ -6,14 +6,11 @@ data:
   providerConfig: |
     application: final-job
     user: admin
-    opsmxIsdUrl: 'https://isd-dev.argo-dev.opsmx.net/'
-    lifetimeMinutes: 4
-    intervalTime: 3
-    lookBackType: sliding
-    gitops: TRUE
+    opsmxIsdUrl: 'https://isd-argocd.isd-dev.opsmx.net/'
+    lifetimeMinutes: 3
     passScore: 90
     serviceList: 
-    - metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "argocd,{{env.STABLE_POD_HASH}},demoapp-issuegen"
-      canaryMetricScope: "argocd,{{env.LATEST_POD_HASH}},demoapp-issuegen"
-      metricTemplateName: "metricyml" 
+    - - logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.Stable_Hash}}.*"
+      canaryLogScope: ".*{{env.Latest_Hash}}.*"
+      logTemplateName: "logtesting"
