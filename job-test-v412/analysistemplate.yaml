@@ -54,7 +54,7 @@ spec:
                   projected:
                     sources:
                     - configMap:
-                        name: elasticasy-verifierss
+                        name: prometheus-app-health-generic-min
                 - name: secret-config-volume
                   secret:
                     secretName: isd-dev-cd-profile
