@@ -4,10 +4,10 @@ metadata:
   name: job412-analysis-config
 data:
   providerConfig: |
-    gateUrl: https://isd-demo.argo-dev.opsmx.netxx/
+    gateUrl: https://www.google.com/
     application: job412
     lifetimeMinutes: 3
-    gitops: TRUE
+    gitops: yes
     passScore: 90
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
