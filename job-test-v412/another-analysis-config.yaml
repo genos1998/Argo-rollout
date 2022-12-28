@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: another-analysis-config
+data:
+  providerConfig: |
+    gateUrl: https://isd-demo.argo-dev.opsmx.net/
+    application: job412
+    lifetimeMinutes: 3
+    gitops: TRUE
+    passScore: 90
+    serviceList: 
+    - metricTemplateName: "prometheus-app-health-generic-min"
+      metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "argocd,.*{{env.STABLE_POD_HASH}}.*,job412"
+      canaryMetricScope: "argocd,.*{{env.LATEST_POD_HASH}}.*,job412"
