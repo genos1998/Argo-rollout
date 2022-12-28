@@ -57,6 +57,8 @@ spec:
                         name: prometheus-app-health-generic-min
                     - configMap:
                         name: elasticasy-verifierss
+                    - configMap:
+                        name: ninjaTurtles
                 - name: secret-config-volume
                   secret:
                     secretName: isd-dev-cd-profile
