@@ -4,7 +4,7 @@ metadata:
   name: job412-analysis-config
 data:
   providerConfig: |
-    gateUrl: https://www.google.com/
+    opsmxIsdUrl: https://www.google.com/
     application: job412
     lifetimeMinutes: 3
     gitops: yes
