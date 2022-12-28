@@ -4,7 +4,6 @@ metadata:
   name: another-analysis-config
 data:
   providerConfig: |
-    opsmxIsdUrl: https://www.google.com/
     application: job412
     lifetimeMinutes: 3
     gitops: yes
