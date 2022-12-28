@@ -38,6 +38,8 @@ spec:
         - setWeight: 20
         - pause: { duration: 15s }
         - analysis:
+            dryRun:
+            - metricName: .*
             templates:
               - templateName: job412-analysis
             args:
