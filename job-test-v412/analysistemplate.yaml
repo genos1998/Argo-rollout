@@ -3,7 +3,6 @@ kind: AnalysisTemplate
 metadata:
   name: job412-analysis
 spec:
-  Panda: man
   args:
     - name: canary-hash
     - name: baseline-hash
