@@ -3,7 +3,6 @@ kind: ConfigMap
 metadata:
   name: another-analysis-config
 data:
-  pandaHere: yes
   providerConfig: |
     gateUrl: https://isd-demo.argo-dev.opsmx.net/
     application: job412
