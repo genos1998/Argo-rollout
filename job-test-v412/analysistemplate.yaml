@@ -3,7 +3,7 @@ kind: AnalysisTemplate
 metadata:
   name: job412-analysis
 spec:
-  args:
+    args:
     - name: canary-hash
     - name: baseline-hash
     - name: test-secret-sub
