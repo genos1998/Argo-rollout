@@ -2,7 +2,9 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: another-analysis-config
+pandaHere: Hello
 data:
+  pandaHere: yes
   providerConfig: |
     gateUrl: https://isd-demo.argo-dev.opsmx.net/
     application: job412
