@@ -21,7 +21,6 @@ spec:
         - name: job412-ctr
           image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1402
           imagePullPolicy: Always
-          Hello: panda
           ports:
             - containerPort: 8088
           env:
