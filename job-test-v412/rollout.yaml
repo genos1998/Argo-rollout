@@ -39,7 +39,7 @@ spec:
         - pause: { duration: 15s }
         - analysis:
             dryRun:
-            - metricName: .*
+            - metricName: job412-analysis
             templates:
               - templateName: job412-analysis
             args:
