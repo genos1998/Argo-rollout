@@ -7,7 +7,7 @@ data:
     gateUrl: https://isd-demo.argo-dev.opsmx.net/
     application: job412
     lifetimeMinutes: 3
-    gitops: TRUE
+    gitops: yes
     passScore: 90
     serviceList: 
     - metricTemplateName: "prometheus-app-health-generic-min"
