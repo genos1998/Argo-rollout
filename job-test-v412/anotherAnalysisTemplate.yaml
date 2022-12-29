@@ -13,7 +13,6 @@ spec:
           key: opsmxIsdUrl
   metrics:
     - name: job412-analysis-score4
-      dryRun: true
       provider:
         job:
           spec:
