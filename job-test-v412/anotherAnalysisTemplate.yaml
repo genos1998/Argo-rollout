@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: job412-analysis
+  name: another-job412-analysis
 spec:
   args:
     - name: canary-hash
