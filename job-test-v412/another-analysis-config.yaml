@@ -11,5 +11,5 @@ data:
     serviceList: 
     - metricTemplateName: "prometheus-app-health-generic-min"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "argocd,.*{{env.STABLE_POD_HASH}}.*,job412"
-      canaryMetricScope: "argocd,.*{{env.LATEST_POD_HASH}}.*,job412"
+      baselineMetricScope: "argocd,.*{{env.MY_POD_NAME}}.*,job412"
+      canaryMetricScope: "argocd,.*{{env.MY_POD_NAME}}.*,job412"
