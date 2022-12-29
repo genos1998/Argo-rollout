@@ -12,7 +12,7 @@ spec:
           name: isd-demo-cd-profile
           key: opsmxIsdUrl
   metrics:
-    - name: job412-analysis-score4
+    - name: panda
       provider:
         job:
           spec:
