@@ -11,8 +11,6 @@ spec:
         secretKeyRef:
           name: isd-demo-cd-profile
           key: opsmxIsdUrl
-  dryRun:
-    - metricName: job412-analysis-score3
   metrics:
     - name: job412-analysis-score4
       provider:
