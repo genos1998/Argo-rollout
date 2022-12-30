@@ -2,10 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
   name: job412-analysis
+  be: bel
 spec:
   args:
     - name: canary-hash
-    - name: baseline-hashbe
+    - name: baseline-hash
     - name: test-secret-sub
       valueFrom:
         secretKeyRef:
