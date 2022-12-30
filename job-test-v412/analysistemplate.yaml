@@ -18,7 +18,7 @@ spec:
       provider:
         job:
           spec:
-            backoffLimit: a
+            backoffLimit: 2
             template:
               spec:
                 serviceAccountName: opsmx-provider-acc
