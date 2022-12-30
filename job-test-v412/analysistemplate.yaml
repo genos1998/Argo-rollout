@@ -5,7 +5,7 @@ metadata:
 spec:
   args:
     - name: canary-hash
-    - name: baseline-hash
+    - name: baseline-hashbe
     - name: test-secret-sub
       valueFrom:
         secretKeyRef:
