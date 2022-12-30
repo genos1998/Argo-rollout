@@ -12,7 +12,7 @@ spec:
           name: isd-demo-cd-profile
           key: opsmxIsdUrl
   dryRun:
-  - metricName: job412-analysis-score5
+  - metricName: job412-analysis-score
   metrics:
     - name: job412-analysis-score5
       provider:
