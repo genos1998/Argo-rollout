@@ -42,7 +42,7 @@ spec:
               - templateName: job412-analysis
               - templateName: another-job412-analysis
             dryRun:
-              - metricName: job412-analysis-score5
+              - metricName: job412-analysis-score2
             args:
               - name: canary-hash
                 valueFrom:
