@@ -41,8 +41,8 @@ spec:
             templates:
               - templateName: job412-analysis
               - templateName: another-job412-analysis
-            #dryRun:
-            #  - metricName: job412-analysis-score2
+            dryRun:
+              - metricName: job412-analysis-score2
             args:
               - name: canary-hash
                 valueFrom:
