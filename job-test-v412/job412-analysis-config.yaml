@@ -4,10 +4,10 @@ metadata:
   name: job412-analysis-config
 data:
   providerConfig: |
-    application: job412
-    lifetimeMinutes: 3
-    gitops: yes
-    passScore: 90
+    Applications: job412
+    LifetimeMinutes: 3
+    getops: yes
+    assScore: 90
     serviceList: 
     - metricTemplateName: "prometheus-app-health-generic-min"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
