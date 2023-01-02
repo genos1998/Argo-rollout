@@ -9,7 +9,7 @@ spec:
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: testapp-rollout
+      app: guestbook
   template:
     metadata:
       annotations:
@@ -17,7 +17,7 @@ spec:
         prometheus_io_path: '/mgmt/prometheus'
         prometheus_io_port: '8088'    
       labels:
-        app: testapp-rollout
+        app: guestbook
     spec:
       containers:
         - name: rollouts-baseline
