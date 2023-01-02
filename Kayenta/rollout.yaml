@@ -9,7 +9,6 @@ spec:
     canary:
       steps:
       - experiment:
-          duration: 1h
           templates:
           - name: baseline
             specRef: stable
