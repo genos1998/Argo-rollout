@@ -6,7 +6,7 @@ data:
   providerConfig: |
     application: final-job
     user: admin
-    opsmxIsdUrl: 'https://isd-argocd.isd-dev.opsmx.net/'
+    opsmxIsdUrl: 'https://isd-dev.argo-dev.opsmx.net/'
     lifetimeMinutes: 12
     intervalTime: 3
     lookbackType: sliding
