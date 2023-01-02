@@ -4,10 +4,12 @@ metadata:
   name: opsmx-provider-config
 data:
   providerConfig: |
-    application: justhere
+    application: final-job
     user: admin
     opsmxIsdUrl: 'https://isd-argocd.isd-dev.opsmx.net/'
-    lifetimeMinutes: 3
+    lifetimeMinutes: 12
+    intervalTime: 3
+    lookbackType: sliding
     passScore: 90
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
