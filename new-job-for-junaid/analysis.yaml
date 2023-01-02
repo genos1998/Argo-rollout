@@ -11,8 +11,9 @@ data:
     intervalTime: 3
     lookbackType: sliding
     passScore: 90
+    gitops: yes
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
       canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
-      logTemplateName: "logtesting"
+      logTemplateName: "logymla"
