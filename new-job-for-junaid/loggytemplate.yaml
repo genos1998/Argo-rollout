@@ -5,7 +5,7 @@ metadata:
 data:
   loggytemplate: |
     {
-      "templateName": "loggxxtemplate",
+      "templateName": "loggytemplate",
       "monitoringProvider": "ELASTICSEARCH",
       "accountName": "logEalastic1",
       "scoringAlgorithm": "Canary",
