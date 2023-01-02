@@ -4,7 +4,7 @@ metadata:
   name: success-rate
 spec:
   metrics:
-  - name: success-rate
+  - name: success-rates
     interval: 5m
     # NOTE: prometheus queries return results in the form of a vector.
     # So it is common to access the index 0 of the returned array to obtain the value
