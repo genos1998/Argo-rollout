@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: guestbook
+  labels:
+    app: guestbook
+spec:
+  strategy:
+    canary:
+      steps:
+      - experiment:
+          duration: 1h
+          templates:
+          - name: baseline
+            specRef: stable
+          - name: canary
+            specRef: canary
+          analyses:
+          - templateName: mann-whitney
+            args:
+            - name: stable-hash
+              valueFrom:
+                podTemplateHashValue: Stable
+            - name: canary-hash
+              valueFrom:
+                podTemplateHashValue: Latest
