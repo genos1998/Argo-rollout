@@ -28,18 +28,15 @@ spec:
   strategy:
     canary:
       steps:
-      - experiment:
-          templates:
-          - name: baseline
-            specRef: stable
-          - name: canary
-            specRef: canary
-          analyses:
-          - templateName: success-rate
+        - setWeight: 25
+        - pause: { duration: 60s }
+        - analysis:
+            templates:
+              - templateName: success-rate
             args:
-            - name: stable-hash
-              valueFrom:
-                podTemplateHashValue: Stable
-            - name: canary-hash
-              valueFrom:
-                podTemplateHashValue: Latest
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
