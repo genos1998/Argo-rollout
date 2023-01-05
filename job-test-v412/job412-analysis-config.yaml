@@ -7,7 +7,7 @@ data:
     Applications: job412
     LifetimeMinutes: 3
     getops: yes
-    assScore: 90
+    passScore: 90
     serviceList: 
     - metricTemplateNameS: "prometheus-app-health-generic-min"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
