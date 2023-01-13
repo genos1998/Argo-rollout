@@ -6,7 +6,7 @@ data:
   providerConfig: |
     Applications: job412
     LifetimeMinutes: 3
-    getops: yes
+    gitops: true
     passScore: 90
     serviceList: 
     - metricTemplateNameS: "prometheus-app-health-generic-min"
