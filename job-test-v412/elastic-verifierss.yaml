@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: elasticasy-verifierss
+  name: elasticasy-verifierssty
 data:
   elasticasy-verifierss: |
     monitoringProvider: ELASTICSEARCH
