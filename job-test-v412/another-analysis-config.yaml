@@ -7,7 +7,7 @@ data:
     application: jobb
     lifetimeMinutes: 5
     passScore: 90
-    opsmxIsdUrl: https://isd-qasaml.isd-qa.opsmx.net/
+    opsmxIsdUrl: https://isd-rbac.isd-qa.opsmx.net/
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
