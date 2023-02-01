@@ -8,7 +8,7 @@ data:
     LifetimeMinutes: 3
     gitops: true
     passScore: 90
-    gateUrl: https://isd-rbac.isd-qa.opsmx.net/ 
+    gateUrl: https://isd-qasaml.isd-qa.opsmx.net/
     serviceList: 
     - metricTemplateNameS: "prometheus-app-health-generic-min"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
