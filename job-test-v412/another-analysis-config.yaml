@@ -4,7 +4,6 @@ metadata:
   name: another-analysis-config
 data:
   providerConfig: |
-    selfRepair: true
     application: job412
     lifetimeMinutes: 5
     gitops: yes
