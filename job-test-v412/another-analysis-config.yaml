@@ -6,11 +6,10 @@ data:
   providerConfig: |
     application: job412
     lifetimeMinutes: 5
-    gitops: yes
     passScore: 90
     opsmxIsdUrl: https://isd-qasaml.isd-qa.opsmx.net/
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
       canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
-      logTemplateName: "elasticasy-verifierss"
+      logTemplateName: "elklogtemp11"
