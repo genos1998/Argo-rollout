@@ -4,7 +4,7 @@ metadata:
   name: another-analysis-config
 data:
   providerConfig: |
-    application: job412
+    application: jobb
     lifetimeMinutes: 5
     passScore: 90
     opsmxIsdUrl: https://isd-qasaml.isd-qa.opsmx.net/
