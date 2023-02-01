@@ -4,11 +4,12 @@ metadata:
   name: another-analysis-config
 data:
   providerConfig: |
+    selfRepair: true
     application: job412
     lifetimeMinutes: 5
     gitops: yes
     passScore: 90
-    gateUrl: https://isd-qasaml.isd-qa.opsmx.net/
+    opsmxIsdUrl: https://isd-qasaml.isd-qa.opsmx.net/
     serviceList: 
     - metricTemplateName: "prometheus-app-health-generic-min"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
