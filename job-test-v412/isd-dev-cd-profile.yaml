@@ -4,7 +4,8 @@ metadata:
   name: isd-dev-cd-profile
 type: Opaque
 data:
-  cdIntegration: dHJ1ZQ==
-  sourceName: YXJnb2NkMTA=
-  opsmxIsdUrl: aHR0cHM6Ly9pc2QtZGV2LmFyZ28tZGV2Lm9wc214Lm5ldA==
-  user: dXNlcjI=
+  cdIntegration: "true"
+  opsmxIsdUrl: "https://vela-testisd.isd-qa.opsmx.net"
+  sourceName: crdtest
+  user: admin
+  agentName: crdtest-opsmx-agent
