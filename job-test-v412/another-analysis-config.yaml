@@ -13,3 +13,4 @@ data:
       baselineMetricScope: "service:baseapp"
       canaryMetricScope: "service:canaryapp"
       metricTemplateName: prometheus-app-health-generic-min
+      elasticasy-verifierss
