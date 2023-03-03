@@ -4,10 +4,10 @@ metadata:
   name: another-analysis-config
 data:
   providerConfig: |
-    application: jobb
-    lifetimeMinutes: 5
+    application: prom-test
+    lifetimeMinutes: 3
+    gitops: true
     passScore: 90
-    opsmxIsdUrl: https://isd-rbac.isd-qa.opsmx.net/
     serviceList: 
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
