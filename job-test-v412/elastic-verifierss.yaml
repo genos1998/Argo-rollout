@@ -5,7 +5,7 @@ metadata:
 data:
   elasticasy-verifierss: |
     monitoringProvider: ELASTICSEARCH
-    accountName: Ealasticsearch
+    accountName: Elasticsearch
     index: kubernetes*
     filterKey: kubernetes.pod_name
     responseKeywords: log
