@@ -16,4 +16,4 @@ data:
       metricScopeVariables: "variable1"
       baselineMetricScope: "service:baseapp"
       canaryMetricScope: "service:canaryapp"
-      metricTemplateName: promy
+      metricTemplateName: prometheus-app-health-generic-min
