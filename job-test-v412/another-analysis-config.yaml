@@ -13,3 +13,7 @@ data:
       baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
       canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
       logTemplateName: "elklogtemp11"
+      metricScopeVariables: "variable1"
+      baselineMetricScope: "service:baseapp"
+      canaryMetricScope: "service:canaryapp"
+      metricTemplateName: promy
