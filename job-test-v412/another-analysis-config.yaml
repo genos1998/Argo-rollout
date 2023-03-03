@@ -13,4 +13,7 @@ data:
       baselineMetricScope: "service:baseapp"
       canaryMetricScope: "service:canaryapp"
       metricTemplateName: prometheus-app-health-generic-min
-      elasticasy-verifierss
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
+      canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
+      logTemplateName: "elasticasy-verifierss"
