@@ -1,3 +1,5 @@
+# remove metricType: ADVANCED
+# advancedProvider -> metricProvider
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -5,10 +7,8 @@ metadata:
 data:
   prometheus-app-health-generic-min: |
     accountName: isd312-saas-prom
-    metricType: ADVANCED
-    advancedProvider: PROMETHEUS
+    metricProvider: PROMETHEUS
     metricTemplateSetup:
-      isNormalize: yes
       groups:
         - metrics:
             - name: "avg(container_memory_usage_bytes{namespace=\"${namespace_key}\", pod=~\"${pod_key}\"})"
