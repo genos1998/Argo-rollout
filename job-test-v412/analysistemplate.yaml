@@ -24,7 +24,7 @@ spec:
                 - name: opsmx11-secret
                 containers:
                 - name: junaid-job-analysis
-                  image: genos1998/argojob:v64
+                  image: docker.io/opsmx11/argo-isd-metric-provider-job:v1.2.4 
                   imagePullPolicy: Always
                   env:
                     - name: MY_POD_NAME
