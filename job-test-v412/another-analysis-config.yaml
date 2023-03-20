@@ -12,4 +12,4 @@ data:
     - logScopeVariables: "kubernetes.pod_name"
       baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
       canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
-      logTemplateName: "elasticasy-verifierss"
+      logTemplateName: "elasticasy-verifierssy"
