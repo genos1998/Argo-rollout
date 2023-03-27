@@ -6,7 +6,7 @@ metadata:
   name: prometheus-app-health-generic-min
 data:
   prometheus-app-health-generic-min: |
-    accountName: isd312-saas-prom
+    accountName: Prometheus
     metricProvider: PROMETHEUS
     metricTemplateSetup:
       groups:
