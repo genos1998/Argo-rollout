@@ -7,7 +7,7 @@ spec:
     - name: canary-hash
     - name: baseline-hash
   metrics:
-    - name: opsmxJob-analysis
+    - name: opsmxjob-analysis
       provider:
         job:
           spec:
