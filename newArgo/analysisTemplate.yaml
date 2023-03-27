@@ -42,7 +42,7 @@ spec:
                 volumes:
                 - name: provider-config-volume
                   configMap:
-                    name: another-analysis-config
+                    name: another-analysis-config1
                 - name: gitopstemplates
                   projected:
                     sources:
