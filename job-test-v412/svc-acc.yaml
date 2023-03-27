@@ -21,6 +21,7 @@ rules:
       - ""	
     resources:	
       - pods	
+      - jobs
     verbs:	
       - get	
       - list
