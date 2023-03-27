@@ -16,10 +16,6 @@ rules:
       - rollouts/status
     verbs:
       - get
-      - list
-      - watch
-      - patch
-      - update
   - apiGroups:
       - "batch"
     resources:
