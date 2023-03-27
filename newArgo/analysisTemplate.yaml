@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: opsmxJob-analysis
+  name: opsmxjob-analysis
 spec:
   args:
     - name: canary-hash
