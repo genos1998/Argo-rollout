@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: elastic-verifier
+data:
+  elastic-verifier: |
+    monitoringProvider: ELASTICSEARCH
+    accountName: Elasticsearch
+    index: kubernetes*
+    filterKey: kubernetes.pod_name
+    responseKeywords: log
