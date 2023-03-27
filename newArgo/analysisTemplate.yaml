@@ -53,7 +53,7 @@ spec:
                     - configMap:
                         name: prometheus-app-health-generic-min
                     - configMap:
-                        name: elasticasy-verifierssy
+                        name: elastic-verifier
                 - name: secret-config-volume
                   secret:
                     secretName: opsmx-secret
