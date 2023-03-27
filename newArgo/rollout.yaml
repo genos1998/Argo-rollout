@@ -6,7 +6,7 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: opsmxJob
+      app: opsmxjob
   revisionHistoryLimit: 2
   template:
     metadata:
@@ -15,10 +15,10 @@ spec:
         prometheus_io_path: /mgmt/prometheus
         prometheus_io_port: '8088'
       labels:
-        app: opsmxJob
+        app: opsmxjob
     spec:
       containers:
-        - name: opsmxJob
+        - name: opsmxjob
           image: quay.io/opsmxpublic/canary-issuegen:issue-canary-gen-1405
           imagePullPolicy: Always
           ports:
