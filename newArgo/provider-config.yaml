@@ -11,5 +11,9 @@ data:
     serviceList: 
     - metricTemplateName: "prometheus-app-health-generic-min1"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "vela-test,.*{{env.STABLE_POD_HASH}}.*,opsmxjob"
-      canaryMetricScope: "vela-test,.*{{env.LATEST_POD_HASH}}.*,opsmxjob"
+      baselineMetricScope: "isd-argocd,.*{{env.STABLE_POD_HASH}}.*,opsmxjob"
+      canaryMetricScope: "isd-argocd,.*{{env.LATEST_POD_HASH}}.*,opsmxjob"
+      logTemplateName: "elastic-verifier"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.STABLE_POD_HASH}}.*"
+      canaryLogScope: ".*{{env.LATEST_POD_HASH}}.*"
