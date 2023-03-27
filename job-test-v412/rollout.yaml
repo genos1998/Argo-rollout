@@ -37,7 +37,7 @@ spec:
       steps:
         - setWeight: 20
         - pause: { duration: 15s }
-        - analysis:
+        - experiment:
             templates:
               - templateName: job412-analysis
             args:
