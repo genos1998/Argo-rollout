@@ -6,10 +6,6 @@ spec:
   args:
     - name: canary-hash
     - name: baseline-hash
-      valueFrom:
-        secretKeyRef:
-          name: opsmx-secret
-          key: opsmxIsdUrl
   metrics:
     - name: opsmxJob-analysis
       provider:
