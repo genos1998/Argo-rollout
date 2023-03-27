@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: another-provider-config
+data:
+  providerConfig: |
+    application: new-test-app
+    lifetimeMinutes: 3
+    gitops: true
+    passScore: 80
+    serviceList: 
+    - metricTemplateName: "prometheus-app-health-verifier"
+      metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
+      baselineMetricScope: "dsargo,.*{{env.STABLE_POD_HASH}}.*,canary-demo"
+      canaryMetricScope: "dsargo,.*{{env.LATEST_POD_HASH}}.*,canary-demo"
