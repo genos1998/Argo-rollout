@@ -18,7 +18,7 @@ spec:
                 imagePullSecrets:
                 - name: opsmx11-secret
                 containers:
-                - name: opsmxJob-analysis
+                - name: opsmxjob-analysis
                   image: docker.io/opsmx11/argo-isd-metric-provider-job:v1.2.4 
                   imagePullPolicy: Always
                   env:
