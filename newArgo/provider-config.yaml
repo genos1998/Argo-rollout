@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: another-analysis-config
+  name: another-analysis-config1
 data:
   providerConfig: |
     application: new-test-app
