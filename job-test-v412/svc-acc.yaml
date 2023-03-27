@@ -12,7 +12,7 @@ rules:
   - apiGroups:
       - "batch"
     resources:
-      - jobs/status
+      - jobs
     verbs:
       - get
       - list
@@ -21,7 +21,6 @@ rules:
       - ""	
     resources:	
       - pods	
-      - jobs
     verbs:	
       - get	
       - list
