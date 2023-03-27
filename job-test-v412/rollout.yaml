@@ -38,6 +38,12 @@ spec:
         - setWeight: 20
         - pause: { duration: 15s }
         - experiment:
-            templates:
+             analyses:
               - name: job412-analysis
+                templateName: job412-analysis
+             templates:
+              - name: baseline
+                specRef: stable
+              - name: canary
+                specRef: canary
             
