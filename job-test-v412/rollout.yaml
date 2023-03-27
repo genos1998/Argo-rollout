@@ -39,11 +39,5 @@ spec:
         - pause: { duration: 15s }
         - experiment:
             templates:
-              - templateName: job412-analysis
-            args:
-              - name: canary-hash
-                valueFrom:
-                  podTemplateHashValue: Latest
-              - name: baseline-hash
-                valueFrom:
-                  podTemplateHashValue: Stable
+              - name: job412-analysis
+            
