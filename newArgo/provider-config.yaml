@@ -9,7 +9,7 @@ data:
     gitops: true
     passScore: 80
     serviceList: 
-    - metricTemplateName: "prometheus-app-health-verifier"
+    - metricTemplateName: "prometheus-app-health-generic-min1"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
       baselineMetricScope: "vela-test,.*{{env.STABLE_POD_HASH}}.*,opsmxjob"
       canaryMetricScope: "vela-test,.*{{env.LATEST_POD_HASH}}.*,opsmxjob"
