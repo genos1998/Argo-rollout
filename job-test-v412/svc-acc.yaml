@@ -10,6 +10,17 @@ metadata:
   name: opsmx-provider-acc
 rules:
   - apiGroups:
+      - "argoproj.io"
+    resources:
+      - rollouts
+      - rollouts/status
+    verbs:
+      - get
+      - list
+      - watch
+      - patch
+      - update
+  - apiGroups:
       - "batch"
     resources:
       - jobs
