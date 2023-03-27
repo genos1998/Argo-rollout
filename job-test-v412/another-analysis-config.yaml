@@ -4,7 +4,6 @@ metadata:
   name: another-analysis-config
 data:
   providerConfig: |
-    application: testinglog
     lifetimeMinutes: 3
     gitops: true
     passScore: 90
