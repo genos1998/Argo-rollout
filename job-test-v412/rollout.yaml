@@ -37,13 +37,25 @@ spec:
       steps:
         - setWeight: 20
         - pause: { duration: 15s }
-        - experiment:
-             analyses:
-              - name: job412-analysis
-                templateName: job412-analysis
-             templates:
-              - name: baseline
-                specRef: stable
-              - name: canary
-                specRef: canary
-            
+        - analysis:
+            templates:
+              - templateName: job412-analysis
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
+        - setWeight: 80
+        - pause: { duration: 15s }
+        - analysis:
+            templates:
+              - templateName: job412-analysis
+            args:
+              - name: canary-hash
+                valueFrom:
+                  podTemplateHashValue: Latest
+              - name: baseline-hash
+                valueFrom:
+                  podTemplateHashValue: Stable
