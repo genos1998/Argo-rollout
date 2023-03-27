@@ -1,15 +1,19 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: another-provider-config
+  name: opsmx-provider-config
 data:
   providerConfig: |
-    application: new-test-app
+    application: panda
     lifetimeMinutes: 3
     gitops: true
     passScore: 80
     serviceList: 
     - metricTemplateName: "prometheus-app-health-verifier"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "vela-test,.*{{env.STABLE_POD_HASH}}.*,opsmxJob"
-      canaryMetricScope: "vela-test,.*{{env.LATEST_POD_HASH}}.*,opsmxJob"
+      baselineMetricScope: "dsargo,.*{{env.STABLE_POD_HASH}}.*,canary-demo"
+      canaryMetricScope: "dsargo,.*{{env.LATEST_POD_HASH}}.*,canary-demo"
+      logScopeVariables: "kubernetes.pod_name"
+      baselineLogScope: ".*{{env.MY_POD_NAME}}.*"
+      canaryLogScope: ".*{{env.MY_POD_NAME}}.*"
+      logTemplateName: "elastic-verifier"
