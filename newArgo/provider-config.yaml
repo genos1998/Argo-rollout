@@ -11,5 +11,5 @@ data:
     serviceList: 
     - metricTemplateName: "prometheus-app-health-verifier"
       metricScopeVariables: "${namespace_key},${pod_key},${app_name}"
-      baselineMetricScope: "dsargo,.*{{env.STABLE_POD_HASH}}.*,canary-demo"
-      canaryMetricScope: "dsargo,.*{{env.LATEST_POD_HASH}}.*,canary-demo"
+      baselineMetricScope: "dsargo,.*{{env.STABLE_POD_HASH}}.*,opsmxJob"
+      canaryMetricScope: "dsargo,.*{{env.LATEST_POD_HASH}}.*,opsmxJob"
