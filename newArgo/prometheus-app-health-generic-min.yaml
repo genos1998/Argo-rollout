@@ -3,9 +3,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prometheus-app-health-generic-min
+  name: prometheus-app-health-generic-min1
 data:
-  prometheus-app-health-generic-min: |
+  prometheus-app-health-generic-min1: |
     accountName: Prometheus
     metricProvider: PROMETHEUS
     metricTemplateSetup:
