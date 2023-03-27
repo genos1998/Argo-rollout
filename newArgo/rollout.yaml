@@ -34,7 +34,7 @@ spec:
         - pause: { duration: 15s }
         - analysis:
             templates:
-              - templateName: opsmxJob-analysis
+              - templateName: opsmxjob-analysis
             args:
               - name: canary-hash
                 valueFrom:
@@ -46,7 +46,7 @@ spec:
         - pause: { duration: 15s }
         - analysis:
             templates:
-              - templateName: opsmxJob-analysis
+              - templateName: opsmxjob-analysis
             args:
               - name: canary-hash
                 valueFrom:
