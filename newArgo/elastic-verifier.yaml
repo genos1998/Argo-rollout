@@ -8,4 +8,4 @@ data:
     accountName: Elasticsearch
     index: issuegenargo-demo-*
     filterKey: kubernetes.pod_name
-    responseKeywords: log
+    responseKeywords: log,message
