@@ -22,11 +22,6 @@ spec:
                   image: quay.io/opsmxpublic/argo-isd-metric-provider-job:v1.2.5
                   imagePullPolicy: Always
                   env:
-                    - name: APP_NAME
-                      valueFrom:
-                        configMapKeyRef:
-                          name: another-analysis-config1
-                          key: argocd.argoproj.io/instance
                     - name: MY_POD_NAME
                       valueFrom:
                         fieldRef:
