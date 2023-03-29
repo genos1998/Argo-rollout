@@ -22,6 +22,10 @@ spec:
                   image: quay.io/opsmxpublic/argo-isd-metric-provider-job:v1.2.5
                   imagePullPolicy: Always
                   env:
+                    - name: APP_NAME
+                      valueFrom:
+                        fieldRef:
+                          fieldPath: metadata.labels['argocd.argoproj.io/instance']
                     - name: MY_POD_NAME
                       valueFrom:
                         fieldRef:
