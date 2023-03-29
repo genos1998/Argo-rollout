@@ -4,7 +4,6 @@ metadata:
   name: another-analysis-config1
 data:
   providerConfig: |
-    application: notme
     lifetimeMinutes: 3
     gitops: true
     passScore: 80
