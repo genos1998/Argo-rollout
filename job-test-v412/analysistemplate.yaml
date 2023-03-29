@@ -27,6 +27,11 @@ spec:
                   image: genos1998/argojob:v358
                   imagePullPolicy: Always
                   env:
+                    - name: APP_NAME
+                      valueFrom:
+                        configMapKeyRef:
+                          name: another-analysis-config
+                          key: argocd.argoproj.io/instance
                     - name: MY_POD_NAME
                       valueFrom:
                         fieldRef:
