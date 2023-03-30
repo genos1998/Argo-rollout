@@ -3,7 +3,7 @@ kind: AnalysisTemplate
 metadata:
   name: opsmxjob-analysis
   labels:
-    argocd.argoproj.io/instance: notme
+    argocd.argoproj.io/instance: panda
 spec:
   args:
     - name: canary-hash
