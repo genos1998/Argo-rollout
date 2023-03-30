@@ -21,7 +21,7 @@ spec:
                 - name: opsmx11-secret
                 containers:
                 - name: opsmxjob-analysis
-                  image: genos1998/argojob:v363
+                  image: genos1998/argojob:v364
                   imagePullPolicy: Always
                   env:
                     - name: MY_POD_NAME
