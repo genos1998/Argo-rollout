@@ -2,6 +2,8 @@ apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
   name: opsmxjob-analysis
+  labels:
+    argocd.argoproj.io/instance: notme
 spec:
   args:
     - name: canary-hash
