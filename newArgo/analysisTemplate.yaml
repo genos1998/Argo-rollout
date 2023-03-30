@@ -27,7 +27,7 @@ spec:
                     - name: APP_NAME
                       valueFrom:
                         fieldRef:
-                          fieldPath: metadata.labels['argocd.argoproj.io/instance']
+                          fieldPath: metadata.labels[''argocd.argoproj.io/instance'']
                     - name: MY_POD_NAME
                       valueFrom:
                         fieldRef:
