@@ -2,8 +2,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
   name: opsmxjob-analysis
-  labels:
-    argocd.argoproj.io/instance: panda
 spec:
   args:
     - name: canary-hash
@@ -21,7 +19,7 @@ spec:
                 - name: opsmx11-secret
                 containers:
                 - name: opsmxjob-analysis
-                  image: genos1998/argojob:v364
+                  image: genos1998/argojob:v365
                   imagePullPolicy: Always
                   env:
                     - name: MY_POD_NAME
