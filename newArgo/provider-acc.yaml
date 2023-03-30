@@ -16,7 +16,6 @@ rules:
       - jobs
     verbs:
       - get
-      - list
       - patch
   - apiGroups:	
       - ""	
