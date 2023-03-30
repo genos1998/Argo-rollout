@@ -24,10 +24,6 @@ spec:
                   image: genos1998/argojob:v360
                   imagePullPolicy: Always
                   env:
-                    - name: APP_NAME
-                      valueFrom:
-                        fieldRef:
-                          fieldPath: 'metadata.labels[''argocd.argoproj.io/instance'']'
                     - name: MY_POD_NAME
                       valueFrom:
                         fieldRef:
