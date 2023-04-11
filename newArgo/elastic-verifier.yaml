@@ -6,6 +6,6 @@ data:
   elastic-verifier: |
     monitoringProvider: ELASTICSEARCH
     accountName: Elasticsearch
-    index: issuegenargo-demo-*
+    index: test_*
     filterKey: kubernetes.pod_name
     responseKeywords: log,message
