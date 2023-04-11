@@ -8,7 +8,7 @@ metadata:
     ingress.kubernetes.io/app-root: /
 spec:
   rules:
-  - host: opsmx-job-ing-test.isd-dev.opsmx.net
+  - host: opsmx-job-ing-test-sj.qa.opsmx.org
     http:
       paths:
       - path: /
